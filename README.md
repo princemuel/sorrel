@@ -1,1 +1,3 @@
-# Sorrel: Local First Search Engine in Rust
+# Sorrel
+
+Sorrel is a local-first search engine in rust
