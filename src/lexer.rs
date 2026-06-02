@@ -71,3 +71,21 @@ pub(crate) enum Token<'a> {
     Num(f64),
     Str(&'a str),
 }
+
+impl From<Token<'_>> for String {
+    fn from(value: Token<'_>) -> Self {
+        match value {
+            Token::Num(v) => v.to_string(),
+            Token::Str(v) => v.to_uppercase(),
+        }
+    }
+}
+
+// impl From<Token<'_>> for &'_ str {
+//     fn from(value: Token<'_>) -> Self {
+//         match value {
+//             Token::Num(v) => v.to_string().as_str(),
+//             Token::Str(v) => v.to_uppercase().as_str(),
+//         }
+//     }
+// }
