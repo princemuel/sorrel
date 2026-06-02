@@ -1,13 +1,15 @@
 use std::io;
 
+type AnyError = Box<dyn core::error::Error + Send + Sync + 'static>;
+
 #[derive(Debug, thiserror::Error)]
 pub enum Error {
-    #[error("unknown error: {0}")]
-    Unexpected(String),
-    #[error("serde error: {0}")]
+    #[error(transparent)]
     Serde(#[from] serde_json::Error),
-    #[error("io error: {0}")]
+    #[error(transparent)]
     Io(#[from] io::Error),
-    #[error("cli error: {0}")]
+    #[error(transparent)]
     Cli(#[from] lexopt::Error),
+    #[error(transparent)]
+    Other(#[from] AnyError),
 }

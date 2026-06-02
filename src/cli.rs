@@ -1,73 +1,129 @@
 use core::net::{IpAddr, Ipv4Addr, SocketAddr};
-use std::path::PathBuf;
+use std::ffi::OsString;
 
 use lexopt::{Error, Parser};
 
-// The subcommand enum — each variant owns its arguments
-pub(crate) enum Subcommand {
-    Serve { path: PathBuf, address: SocketAddr },
+pub enum Subcommand {
+    Serve { path: OsString, address: SocketAddr },
+    Index { path: OsString },
+    Search { query: String },
 }
 
-pub(crate) struct Args {
+pub struct Args {
     pub subcommand: Subcommand,
 }
 
+pub enum Action {
+    Help,
+    Run(Args),
+}
+
+const DEFAULT_ADDRESS: SocketAddr = SocketAddr::new(IpAddr::V4(Ipv4Addr::LOCALHOST), 8080);
+
 impl Args {
-    pub(crate) fn parse() -> Result<Self, Error> {
+    pub fn parse() -> Result<Action, Error> {
         use lexopt::prelude::*;
 
-        let parser = Parser::from_env();
+        let mut parser = Parser::from_env();
 
-        // lexopt doesn't expose argv[0] directly, but you can get it if needed:
-        let program = parser.bin_name().unwrap_or("sorrel");
-
-        // TODO: cloned this due to the immutable borrow earlier
-        let mut parser = parser.clone();
-
-        // First positional value is the subcommand
         let subcommand = match parser.next()? {
             Some(Value(v)) => v.string()?,
+            Some(Short('h') | Long("help")) => return Ok(Action::Help),
             Some(arg) => return Err(arg.unexpected()),
-            None => {
-                eprintln!("ERROR: no subcommand is provided");
-                eprintln!("USAGE: {program} <subcommand> [args]");
-                return Err(Error::Custom("no subcommand provided".into()));
-            }
+            None => return Err(Error::Custom("no subcommand provided".into())),
         };
 
         let subcommand = match subcommand.as_str() {
             "serve" => {
-                // --- positional: path ---
-                let path = match parser.next()? {
-                    Some(Value(v)) => PathBuf::from(v.string()?),
-                    Some(arg) => return Err(arg.unexpected()),
-                    None => {
-                        eprintln!("ERROR: no directory is provided for `serve` subcommand");
-                        return Err(Error::Custom("missing path for serve".into()));
+                let mut path = None;
+                let mut address = None;
+
+                while let Some(arg) = parser.next()? {
+                    match arg {
+                        Short('h') | Long("help") => return Ok(Action::Help),
+                        Value(v) if path.is_none() => {
+                            path = Some(v);
+                        }
+                        Value(v) if address.is_none() => {
+                            address = Some(v.string()?.parse().unwrap_or(DEFAULT_ADDRESS));
+                        }
+                        arg => return Err(arg.unexpected()),
                     }
-                };
+                }
 
-                // --- optional positional: address ---
-                let address = match parser.next()? {
-                    Some(Value(v)) => v.string()?,
-                    Some(arg) => return Err(arg.unexpected()),
-                    None => "127.0.0.1:8080".to_owned(),
-                };
+                let path = path.ok_or_else(|| {
+                    Error::Custom("no directory provided for the `serve` command".into())
+                })?;
 
-                let address = address
-                    .parse()
-                    .unwrap_or_else(|_| SocketAddr::new(IpAddr::V4(Ipv4Addr::LOCALHOST), 8080));
-
-                Subcommand::Serve { path, address }
+                Subcommand::Serve { path, address: address.unwrap_or(DEFAULT_ADDRESS) }
             }
 
-            other => {
-                eprintln!("ERROR: unknown subcommand `{other}`");
-                eprintln!("USAGE: {program} <subcommand> [args]");
-                return Err(Error::Custom(format!("unknown subcommand `{other}`").into()));
+            "index" => {
+                let mut path = None;
+
+                while let Some(arg) = parser.next()? {
+                    match arg {
+                        Short('h') | Long("help") => return Ok(Action::Help),
+                        Value(v) if path.is_none() => {
+                            path = Some(v);
+                        }
+                        arg => return Err(arg.unexpected()),
+                    }
+                }
+
+                let path = path.ok_or_else(|| {
+                    Error::Custom("no path provided for the `index` command".into())
+                })?;
+
+                Subcommand::Index { path }
+            }
+
+            "search" => {
+                let mut query = None;
+
+                while let Some(arg) = parser.next()? {
+                    match arg {
+                        Short('h') | Long("help") => return Ok(Action::Help),
+                        Value(v) if query.is_none() => {
+                            query = Some(v.string()?);
+                        }
+                        arg => return Err(arg.unexpected()),
+                    }
+                }
+
+                let query = query.ok_or_else(|| {
+                    Error::Custom("no query provided for the `search` command".into())
+                })?;
+
+                Subcommand::Search { query }
+            }
+            "help" => return Ok(Action::Help),
+            command => {
+                return Err(Error::Custom(format!("unknown subcommand `{command}`").into()));
             }
         };
 
-        Ok(Args { subcommand })
+        Ok(Action::Run(Args { subcommand }))
+    }
+
+    pub fn usage() {
+        eprint!(
+            "\
+A Local-First Search Engine Indexer
+
+Usage:
+    sorrel[EXE] <COMMAND> [OPTIONS]
+
+Commands:
+    serve <folder> [address]        Start a local HTTP server with a Web Interface
+                                    address defaults to 127.0.0.1:8080
+    index <folder>                  index the folder and save the index to the index file
+    search <index-file>             Search the index file for the given query
+    help  Print this message or the help of the given subcommand(s)
+
+Options:
+    -h, --help    Print this help and exit
+    "
+        );
     }
 }
