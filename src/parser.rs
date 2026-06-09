@@ -8,6 +8,6 @@ impl Parser {
     where
         P: AsRef<Path>,
     {
-        todo!()
+        unimplemented!()
     }
 }
