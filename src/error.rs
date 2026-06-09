@@ -1,9 +1,8 @@
+use core::error::Error;
 use std::io;
 
-type AnyError = Box<dyn core::error::Error + Send + Sync + 'static>;
-
 #[derive(Debug, thiserror::Error)]
-pub enum Error {
+pub enum GlobalError {
     #[error(transparent)]
     Serde(#[from] serde_json::Error),
     #[error(transparent)]
@@ -11,5 +10,5 @@ pub enum Error {
     #[error(transparent)]
     Cli(#[from] lexopt::Error),
     #[error(transparent)]
-    Other(#[from] AnyError),
+    Other(#[from] Box<dyn Error + Send + Sync + 'static>),
 }
