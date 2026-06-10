@@ -8,7 +8,7 @@ use crate::lexer::Lexer;
 use crate::prelude::GlobalError;
 
 pub(crate) trait Model {
-    fn search(&self, query: &str) -> Result<Vec<(PathBuf, f32)>, GlobalError>;
+    fn search(&self, query: &str) -> Result<Vec<(PathBuf, PathBuf, f32)>, GlobalError>;
     fn add_document(&mut self, path: &Path, content: &str) -> Result<(), GlobalError>;
 }
 
@@ -16,7 +16,7 @@ pub(crate) struct SqliteModel;
 
 impl SqliteModel {}
 impl Model for SqliteModel {
-    fn search(&self, _query: &str) -> Result<Vec<(PathBuf, f32)>, GlobalError> { todo!() }
+    fn search(&self, _query: &str) -> Result<Vec<(PathBuf, PathBuf, f32)>, GlobalError> { todo!() }
 
     fn add_document(&mut self, _path: &Path, _content: &str) -> Result<(), GlobalError> { todo!() }
 }
@@ -27,6 +27,7 @@ type TermFreq = HashMap<String, usize>;
 
 #[derive(Debug, Default, Deserialize, Serialize)]
 struct Doc {
+    file: PathBuf,
     tf: TermFreq,
     count: usize,
 }
@@ -38,10 +39,10 @@ pub(crate) struct JsonModel {
 }
 
 impl Model for JsonModel {
-    fn search(&self, query: &str) -> Result<Vec<(PathBuf, f32)>, GlobalError> {
+    fn search(&self, query: &str) -> Result<Vec<(PathBuf, PathBuf, f32)>, GlobalError> {
         let mut results = vec![];
 
-        let tokens: Vec<_> = Lexer::new(query).map(|t| t.lexeme).collect();
+        let tokens: Vec<_> = Lexer::new(query).collect();
 
         for (path, doc) in &self.docs {
             let mut rank = 0f32;
@@ -50,20 +51,20 @@ impl Model for JsonModel {
                 rank += compute_tf(term, doc) * compute_idf(term, self.docs.len(), &self.df);
             }
 
-            results.push((path.to_owned(), rank));
+            results.push((path.to_owned(), path.canonicalize()?, rank));
         }
 
-        results.sort_by(|(_, a), (_, b)| b.partial_cmp(a).unwrap_or(Ordering::Equal));
+        results.sort_by(|(_, _, a), (_, _, b)| b.partial_cmp(a).unwrap_or(Ordering::Equal));
         Ok(results)
     }
 
     fn add_document(&mut self, path: &Path, content: &str) -> Result<(), GlobalError> {
         let mut tf = TermFreq::new();
         let mut count = 0;
-        let tokens: Vec<_> = Lexer::new(content).map(|t| t.lexeme).collect();
+        let tokens: Vec<_> = Lexer::new(content).collect();
 
         for term in tokens {
-            tf.entry(term.to_owned()).and_modify(|freq| *freq += 1).or_insert(1);
+            tf.entry(term.to_string()).and_modify(|freq| *freq += 1).or_insert(1);
             count += 1;
         }
 
@@ -72,7 +73,7 @@ impl Model for JsonModel {
             self.df.entry(t.to_owned()).and_modify(|freq| *freq += 1).or_insert(1);
         }
 
-        self.docs.insert(path.to_path_buf(), Doc { tf, count });
+        self.docs.insert(path.to_path_buf(), Doc { tf, count, file: path.canonicalize()? });
 
         Ok(())
     }

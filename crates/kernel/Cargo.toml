@@ -1,0 +1,21 @@
+[package]
+name = "kernel"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+lexopt.workspace = true
+rusqlite.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tiny_http.workspace = true
+waken_snowball.workspace = true
+xml.workspace = true
+
+cli.workspace = true
+
+[lints]
+workspace = true

@@ -14,7 +14,7 @@ impl Parser {
         let path = path.as_ref();
         let ext = path.extension().ok_or_else(|| {
             Error::other(format!(
-                "cant detect the file tpe of this path '{path}' w/o the extension",
+                "cant detect the filetype of `{path}` w/o the extension",
                 path = path.display()
             ))
         })?;
@@ -24,7 +24,7 @@ impl Parser {
             Some("txt" | "md") => Self::read_text(path)?,
             _ => {
                 return Err(Error::other(format!(
-                    "unsupported extension {ext}",
+                    "unsupported extension `{ext}`",
                     ext = ext.display()
                 )));
             }

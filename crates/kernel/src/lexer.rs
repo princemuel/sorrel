@@ -1,24 +1,19 @@
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub(crate) struct Token<'a> {
-    pub span: Span,
-    pub lexeme: &'a str,
-}
+use std::borrow::Cow;
 
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub(crate) struct Span {
-    pub start: usize,
-    pub end: usize,
-}
+use waken_snowball::{Algorithm, Stemmer};
 
 pub(crate) struct Lexer<'a> {
     source: &'a str,
     cursor: usize,
+    stemmer: Stemmer,
 }
 
 impl<'a> Lexer<'a> {
-    pub(crate) fn new(source: &'a str) -> Self { Self { source, cursor: 0 } }
+    pub(crate) fn new(source: &'a str) -> Self {
+        Self { source, cursor: 0, stemmer: Algorithm::English.stemmer() }
+    }
 
-    fn next_token(&mut self) -> Option<Token<'a>> {
+    fn next_token(&mut self) -> Option<Cow<'a, str>> {
         loop {
             self.advance_while(|b| b.is_ascii_whitespace());
 
@@ -31,8 +26,14 @@ impl<'a> Lexer<'a> {
             if byte.is_ascii_alphanumeric() {
                 self.advance_while(|b| b.is_ascii_alphanumeric());
 
-                let lexeme = self.slice(start);
-                return Some(Token { span: self.span(start), lexeme });
+                // TODO: add a check here to filter out non alphabetic stuff???
+                let term = self.slice(start);
+                if term.chars().any(|c| !c.is_ascii_alphabetic()) {
+                    return None;
+                }
+
+                let term = term.to_ascii_uppercase();
+                return Some(self.stemmer.stem(&term).into_owned().into());
             }
         }
     }
@@ -61,13 +62,11 @@ impl<'a> Lexer<'a> {
         }
     }
 
-    fn span(&self, start: usize) -> Span { Span { start, end: self.cursor } }
-
     fn slice(&self, start: usize) -> &'a str { &self.source[start..self.cursor] }
 }
 
 impl<'a> Iterator for Lexer<'a> {
-    type Item = Token<'a>;
+    type Item = Cow<'a, str>;
 
     fn next(&mut self) -> Option<Self::Item> { self.next_token() }
 }

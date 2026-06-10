@@ -1,8 +1,8 @@
-mod cli;
 mod error;
 mod lexer;
 mod model;
 mod parser;
+
 pub mod prelude;
 mod server;
 
@@ -10,7 +10,7 @@ use std::fs::{self, File};
 use std::io::{BufReader, BufWriter};
 use std::path::{Path, PathBuf};
 
-pub use cli::{Action, Args, Subcommand};
+use cli::{Args, Subcommand};
 pub use error::GlobalError;
 
 use crate::model::{JsonModel, Model};
@@ -31,16 +31,18 @@ pub fn run(args: &Args) -> Result<(), GlobalError> {
             let add_to_idx = |path: &Path, model: &mut dyn Model| -> Result<(), GlobalError> {
                 eprintln!("indexing {path}...", path = path.display());
 
-                let content = Parser::read_by_ext(path)?;
-                model.add_document(path, &content)?;
+                let doc = Parser::read_by_ext(path).map_err(|e| eprintln!("ERROR: {e}")).ok();
+                if let Some(content) = doc {
+                    model.add_document(path, &content)?;
+                }
 
                 Ok(())
             };
 
             while let Some(dir) = dirs.pop() {
                 for entry in fs::read_dir(&dir)?.flatten() {
-                    let r#type = entry.file_type()?;
                     let path = entry.path();
+                    let r#type = entry.file_type()?;
 
                     #[expect(clippy::filetype_is_file)]
                     #[expect(clippy::else_if_without_else)]
@@ -68,7 +70,7 @@ pub fn run(args: &Args) -> Result<(), GlobalError> {
 
             println!("searching for '{query}'...");
 
-            for (path, rank) in model.search(query)?.iter().take(20) {
+            for (path, _, rank) in model.search(query)?.iter().take(20) {
                 println!("{path} {rank}", path = path.display());
             }
         }

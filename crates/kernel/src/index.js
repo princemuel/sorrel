@@ -2,6 +2,8 @@
 const form = $("form", HTMLFormElement);
 /**@type HTMLUListElement */
 const results = $("#results", HTMLUListElement);
+/**@type HTMLTemplateElement */
+const template = $("#template", HTMLTemplateElement);
 
 /**
  * @typedef {{query: string}} Data
@@ -12,6 +14,32 @@ form.addEventListener("submit", async (e) => {
   const data = Object.fromEntries(new FormData(form));
   await search(data.query);
 });
+
+// TODO: live update results as you type
+async function search(/**@type string */ prompt) {
+  const request = await fetch("/api/search", {
+    method: "POST",
+    headers: { "Content-Type": "text/plain; charset=utf-8" },
+    body: prompt,
+  });
+
+  const response = await request.json();
+
+  const fragment = document.createDocumentFragment();
+
+  for (const [text, href, _] of response) {
+    const li = document.createElement("li");
+    const a = Object.assign(document.createElement("a"), {
+      href: filepath,
+      textContent: `file://${href}`,
+    });
+
+    li.appendChild(a);
+    fragment.append(li);
+  }
+
+  results.replaceChildren(fragment);
+}
 
 function $(selector, Constructor, nodelist = false, parent = document) {
   if (nodelist) {
@@ -35,24 +63,3 @@ function throwAsError(exception) {
 }
 
 export {};
-
-// TODO: live update results as you type
-async function search(/**@type string */ prompt) {
-  const request = await fetch("/api/search", {
-    method: "POST",
-    headers: { "Content-Type": "text/plain; charset=utf-8" },
-    body: prompt,
-  });
-
-  const response = await request.json();
-  const fragment = document.createDocumentFragment();
-
-  console.log(JSON.stringify(response));
-
-  for (const [path, _] of response) {
-    const item = Object.assign(document.createElement("li"), { textContent: path });
-    fragment.append(item);
-  }
-
-  results.replaceChildren(fragment);
-}

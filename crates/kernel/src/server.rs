@@ -54,26 +54,22 @@ fn serve_api_search(mut req: Request, model: &impl Model) -> io::Result<()> {
         }
     };
 
-    let results = model.search(query);
-
-    let json = match serde_json::to_string(&results.iter().take(20).collect::<Vec<_>>()) {
-        Ok(json) => json,
-        Err(e) => {
-            eprintln!("ERROR: could not convert to json: {e}");
-            return serve_500(req);
-        }
+    let Ok(results) = model.search(query) else { return serve_500(req) };
+    let Ok(json) = serde_json::to_string(&results.iter().take(20).collect::<Vec<_>>()) else {
+        return serve_500(req);
     };
 
-    // TODO: cleanup this unwrap later
-    #[expect(clippy::unwrap_used)]
-    let content_type = Header::from_bytes("Content-Type", "application/json").unwrap();
+    let Ok(content_type) = Header::from_bytes("Content-Type", "application/json") else {
+        return serve_400(req, "invalid header value");
+    };
     req.respond(Response::from_string(json).with_header(content_type))
 }
 
 fn serve_static(req: Request, bytes: &[u8], content_type: &str) -> io::Result<()> {
-    // TODO: cleanup this unwrap later
-    #[expect(clippy::unwrap_used)]
-    let content_type = Header::from_bytes("Content-Type", content_type).unwrap();
+    let Ok(content_type) = Header::from_bytes("Content-Type", content_type) else {
+        return serve_400(req, "invalid header value");
+    };
+
     let response = Response::from_data(bytes).with_header(content_type);
     req.respond(response)
 }
