@@ -1,10 +1,12 @@
 //! Generated from russian.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::SnowballEnv;
 use crate::snowball::Among;
 
@@ -14,7 +16,7 @@ struct Context {
     i_pV: i32,
 }
 
-static A_0: &'static [Among<Context>; 9] = &[
+static A_0: &[Among<Context>; 9] = &[
     Among("вшись", -1, 1, None),
     Among("ывшись", 0, 2, None),
     Among("ившись", 0, 2, None),
@@ -26,7 +28,7 @@ static A_0: &'static [Among<Context>; 9] = &[
     Among("ивши", 6, 2, None),
 ];
 
-static A_1: &'static [Among<Context>; 26] = &[
+static A_1: &[Among<Context>; 26] = &[
     Among("ему", -1, 1, None),
     Among("ому", -1, 1, None),
     Among("ых", -1, 1, None),
@@ -55,7 +57,7 @@ static A_1: &'static [Among<Context>; 26] = &[
     Among("ого", -1, 1, None),
 ];
 
-static A_2: &'static [Among<Context>; 8] = &[
+static A_2: &[Among<Context>; 8] = &[
     Among("вш", -1, 1, None),
     Among("ывш", 0, 2, None),
     Among("ивш", 0, 2, None),
@@ -66,12 +68,12 @@ static A_2: &'static [Among<Context>; 8] = &[
     Among("нн", -1, 1, None),
 ];
 
-static A_3: &'static [Among<Context>; 2] = &[
+static A_3: &[Among<Context>; 2] = &[
     Among("сь", -1, 1, None),
     Among("ся", -1, 1, None),
 ];
 
-static A_4: &'static [Among<Context>; 46] = &[
+static A_4: &[Among<Context>; 46] = &[
     Among("ыт", -1, 2, None),
     Among("ют", -1, 1, None),
     Among("уют", 1, 2, None),
@@ -120,7 +122,7 @@ static A_4: &'static [Among<Context>; 46] = &[
     Among("нно", 43, 1, None),
 ];
 
-static A_5: &'static [Among<Context>; 36] = &[
+static A_5: &[Among<Context>; 36] = &[
     Among("у", -1, 1, None),
     Among("ях", -1, 1, None),
     Among("иях", 1, 1, None),
@@ -159,21 +161,21 @@ static A_5: &'static [Among<Context>; 36] = &[
     Among("о", -1, 1, None),
 ];
 
-static A_6: &'static [Among<Context>; 2] = &[
+static A_6: &[Among<Context>; 2] = &[
     Among("ост", -1, 1, None),
     Among("ость", -1, 1, None),
 ];
 
-static A_7: &'static [Among<Context>; 4] = &[
+static A_7: &[Among<Context>; 4] = &[
     Among("ейш", -1, 1, None),
     Among("ь", -1, 3, None),
     Among("ейше", -1, 1, None),
     Among("н", -1, 2, None),
 ];
 
-static G_v: &'static [u8; 4] = &[33, 65, 8, 232];
+static G_v: & [u8; 4] = &[33, 65, 8, 232];
 
-fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_regions(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     context.i_pV = env.limit;
     context.i_p2 = env.limit;
     let v_1 = env.cursor;
@@ -202,7 +204,7 @@ fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_perfective_gerund(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_perfective_gerund(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_0, context);
@@ -234,7 +236,7 @@ fn r_perfective_gerund(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_adjective(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_adjective(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_1, context) == 0 {
         return false;
@@ -244,7 +246,7 @@ fn r_adjective(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_adjectival(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_adjectival(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     if !r_adjective(env, context) {
         return false;
@@ -285,9 +287,9 @@ fn r_adjectival(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_reflexive(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_reflexive(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 3 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 140 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 143 as u8)) {
+    if (env.cursor - 3 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 140 && env.current.as_bytes()[(env.cursor - 1) as usize] != 143)) {
         return false;
     }
 
@@ -299,7 +301,7 @@ fn r_reflexive(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_verb(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_4, context);
@@ -331,7 +333,7 @@ fn r_verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_noun(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_5, context) == 0 {
         return false;
@@ -341,9 +343,9 @@ fn r_noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_derivational(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_derivational(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 5 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 130 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 140 as u8)) {
+    if (env.cursor - 5 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 130 && env.current.as_bytes()[(env.cursor - 1) as usize] != 140)) {
         return false;
     }
 
@@ -358,7 +360,7 @@ fn r_derivational(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_tidy_up(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_tidy_up(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_7, context);
@@ -393,7 +395,7 @@ fn r_tidy_up(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context {
         i_p2: 0,
         i_pV: 0,

@@ -1,10 +1,12 @@
 //! Generated from french.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::SnowballEnv;
 use crate::snowball::Among;
 
@@ -15,14 +17,14 @@ struct Context {
     i_pV: i32,
 }
 
-static A_0: &'static [Among<Context>; 4] = &[
+static A_0: &[Among<Context>; 4] = &[
     Among("col", -1, -1, None),
     Among("ni", -1, 1, None),
     Among("par", -1, -1, None),
     Among("tap", -1, -1, None),
 ];
 
-static A_1: &'static [Among<Context>; 7] = &[
+static A_1: &[Among<Context>; 7] = &[
     Among("", -1, 7, None),
     Among("H", 0, 6, None),
     Among("He", 1, 4, None),
@@ -32,7 +34,7 @@ static A_1: &'static [Among<Context>; 7] = &[
     Among("Y", 0, 3, None),
 ];
 
-static A_2: &'static [Among<Context>; 6] = &[
+static A_2: &[Among<Context>; 6] = &[
     Among("iqU", -1, 3, None),
     Among("abl", -1, 3, None),
     Among("Ièr", -1, 4, None),
@@ -41,13 +43,13 @@ static A_2: &'static [Among<Context>; 6] = &[
     Among("iv", -1, 1, None),
 ];
 
-static A_3: &'static [Among<Context>; 3] = &[
+static A_3: &[Among<Context>; 3] = &[
     Among("ic", -1, 2, None),
     Among("abil", -1, 1, None),
     Among("iv", -1, 3, None),
 ];
 
-static A_4: &'static [Among<Context>; 44] = &[
+static A_4: &[Among<Context>; 44] = &[
     Among("iqUe", -1, 1, None),
     Among("atrice", -1, 2, None),
     Among("ance", -1, 1, None),
@@ -94,7 +96,7 @@ static A_4: &'static [Among<Context>; 44] = &[
     Among("ité", -1, 7, None),
 ];
 
-static A_5: &'static [Among<Context>; 35] = &[
+static A_5: &[Among<Context>; 35] = &[
     Among("ira", -1, 1, None),
     Among("ie", -1, 1, None),
     Among("isse", -1, 1, None),
@@ -132,13 +134,13 @@ static A_5: &'static [Among<Context>; 35] = &[
     Among("issez", -1, 1, None),
 ];
 
-static A_6: &'static [Among<Context>; 3] = &[
+static A_6: &[Among<Context>; 3] = &[
     Among("al", -1, 1, None),
     Among("épl", -1, -1, None),
     Among("auv", -1, -1, None),
 ];
 
-static A_7: &'static [Among<Context>; 41] = &[
+static A_7: &[Among<Context>; 41] = &[
     Among("a", -1, 3, None),
     Among("era", 0, 2, None),
     Among("aise", -1, 4, None),
@@ -182,7 +184,7 @@ static A_7: &'static [Among<Context>; 41] = &[
     Among("é", -1, 2, None),
 ];
 
-static A_8: &'static [Among<Context>; 6] = &[
+static A_8: &[Among<Context>; 6] = &[
     Among("e", -1, 3, None),
     Among("Ière", 0, 2, None),
     Among("ière", 0, 2, None),
@@ -191,7 +193,7 @@ static A_8: &'static [Among<Context>; 6] = &[
     Among("ier", -1, 2, None),
 ];
 
-static A_9: &'static [Among<Context>; 5] = &[
+static A_9: &[Among<Context>; 5] = &[
     Among("ell", -1, -1, None),
     Among("eill", -1, -1, None),
     Among("enn", -1, -1, None),
@@ -199,15 +201,15 @@ static A_9: &'static [Among<Context>; 5] = &[
     Among("ett", -1, -1, None),
 ];
 
-static G_v: &'static [u8; 20] = &[17, 65, 16, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 130, 103, 8, 5];
+static G_v: & [u8; 20] = &[17, 65, 16, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 130, 103, 8, 5];
 
-static G_oux_ending: &'static [u8; 2] = &[65, 85];
+static G_oux_ending: & [u8; 2] = &[65, 85];
 
-static G_elision_char: &'static [u8; 3] = &[131, 14, 3];
+static G_elision_char: & [u8; 3] = &[131, 14, 3];
 
-static G_keep_with_s: &'static [u8; 17] = &[1, 65, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128];
+static G_keep_with_s: & [u8; 17] = &[1, 65, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128];
 
-fn r_elisions(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_elisions(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.bra = env.cursor;
     'lab0: loop {
         'lab1: loop {
@@ -232,7 +234,7 @@ fn r_elisions(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_prelude(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_prelude(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     'replab0: loop{
         let v_1 = env.cursor;
         'lab1: for _ in 0..1 {
@@ -343,7 +345,7 @@ fn r_prelude(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_regions(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     context.i_pV = env.limit;
     context.i_p1 = env.limit;
@@ -367,7 +369,7 @@ fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {
             }
             env.cursor = v_2;
             'lab3: loop {
-                if (env.cursor + 1 >= env.limit || env.current.as_bytes()[(env.cursor + 1) as usize] as u8 >> 5 != 3 as u8 || ((33282 as i32 >> (env.current.as_bytes()[(env.cursor + 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+                if (env.cursor + 1 >= env.limit || env.current.as_bytes()[(env.cursor + 1) as usize] >> 5 != 3 || ((33282  >> (env.current.as_bytes()[(env.cursor + 1) as usize] & 0x1f)) & 1) == 0) {
                     break 'lab3;
                 }
 
@@ -426,13 +428,13 @@ fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_postlude(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_postlude(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     'replab0: loop{
         let v_1 = env.cursor;
         'lab1: for _ in 0..1 {
             env.bra = env.cursor;
-            if (env.cursor >= env.limit || env.current.as_bytes()[(env.cursor + 0) as usize] as u8 >> 5 != 2 as u8 || ((35652352 as i32 >> (env.current.as_bytes()[(env.cursor + 0) as usize] as u8 & 0x1f)) & 1) == 0) {among_var = 7;}
+            if (env.cursor >= env.limit || env.current.as_bytes()[(env.cursor + 0) as usize] >> 5 != 2 || ((35652352  >> (env.current.as_bytes()[(env.cursor + 0) as usize] & 0x1f)) & 1) == 0) {among_var = 7;}
             else {
                 among_var = env.find_among(A_1, context);
             }
@@ -472,19 +474,19 @@ fn r_postlude(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_RV(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_RV(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     return context.i_pV <= env.cursor
 }
 
-fn r_R1(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_R1(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     return context.i_p1 <= env.cursor
 }
 
-fn r_R2(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_R2(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     return context.i_p2 <= env.cursor
 }
 
-fn r_standard_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_standard_suffix(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_4, context);
@@ -625,7 +627,7 @@ fn r_standard_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
             let v_5 = env.limit - env.cursor;
             'lab6: loop {
                 env.ket = env.cursor;
-                if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 3 as u8 || ((4198408 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+                if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 3 || ((4198408  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0) {
                     env.cursor = env.limit - v_5;
                     break 'lab6;
                 }
@@ -792,14 +794,14 @@ fn r_standard_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_i_verb_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_i_verb_suffix(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if env.cursor < context.i_pV {
         return false;
     }
     let v_1 = env.limit_backward;
     env.limit_backward = context.i_pV;
     env.ket = env.cursor;
-    if (env.cursor <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 3 as u8 || ((68944418 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+    if (env.cursor <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 3 || ((68944418  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0) {
         env.limit_backward = v_1;
         return false;
     }
@@ -825,7 +827,7 @@ fn r_i_verb_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_verb_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_verb_suffix(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     if env.cursor < context.i_pV {
         return false;
@@ -869,7 +871,7 @@ fn r_verb_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
         4 => {
             let v_3 = env.limit - env.cursor;
             'lab1: loop {
-                if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 108 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 118 as u8)) {
+                if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 108 && env.current.as_bytes()[(env.cursor - 1) as usize] != 118)) {
                     break 'lab1;
                 }
 
@@ -899,7 +901,7 @@ fn r_verb_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_residual_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_residual_suffix(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     let v_1 = env.limit - env.cursor;
     'lab0: loop {
@@ -933,7 +935,7 @@ fn r_residual_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
     let v_3 = env.limit_backward;
     env.limit_backward = context.i_pV;
     env.ket = env.cursor;
-    if (env.cursor <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 3 as u8 || ((278560 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+    if (env.cursor <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 3 || ((278560  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0) {
         env.limit_backward = v_3;
         return false;
     }
@@ -977,9 +979,9 @@ fn r_residual_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_un_double(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_un_double(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.limit - env.cursor;
-    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 3 as u8 || ((1069056 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 3 || ((1069056  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0) {
         return false;
     }
 
@@ -997,7 +999,7 @@ fn r_un_double(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_un_accent(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_un_accent(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut v_1 = 1;
     'replab0: loop{
         'lab1: for _ in 0..1 {
@@ -1030,7 +1032,7 @@ fn r_un_accent(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context {
         i_p2: 0,
         i_p1: 0,

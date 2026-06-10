@@ -1,10 +1,12 @@
 //! Generated from hindi.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::SnowballEnv;
 use crate::snowball::Among;
 
@@ -12,7 +14,7 @@ use crate::snowball::Among;
 struct Context {
 }
 
-static A_0: &'static [Among<Context>; 132] = &[
+static A_0: &[Among<Context>; 132] = &[
     Among("\u{940}", -1, -1, None),
     Among("\u{942}\u{902}\u{917}\u{940}", 0, -1, None),
     Among("\u{947}\u{902}\u{917}\u{940}", 0, -1, None),
@@ -147,13 +149,13 @@ static A_0: &'static [Among<Context>; 132] = &[
     Among("\u{93F}", -1, -1, None),
 ];
 
-static G_consonant: &'static [u8; 10] = &[255, 255, 255, 255, 159, 0, 0, 0, 248, 7];
+static G_consonant: & [u8; 10] = &[255, 255, 255, 255, 159, 0, 0, 0, 248, 7];
 
-fn r_CONSONANT(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_CONSONANT(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     return env.in_grouping_b(G_consonant, 2325, 2399);
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context {
     };
     if env.cursor >= env.limit {

@@ -1,10 +1,12 @@
 //! Generated from greek.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::SnowballEnv;
 use crate::snowball::Among;
 
@@ -13,7 +15,7 @@ struct Context {
     b_test1: bool,
 }
 
-static A_0: &'static [Among<Context>; 46] = &[
+static A_0: &[Among<Context>; 46] = &[
     Among("", -1, 25, None),
     Among("ς", 0, 18, None),
     Among("Ά", 0, 1, None),
@@ -62,7 +64,7 @@ static A_0: &'static [Among<Context>; 46] = &[
     Among("ΰ", 0, 20, None),
 ];
 
-static A_1: &'static [Among<Context>; 40] = &[
+static A_1: &[Among<Context>; 40] = &[
     Among("καθεστωσ", -1, 10, None),
     Among("φωσ", -1, 9, None),
     Among("περασ", -1, 7, None),
@@ -105,7 +107,7 @@ static A_1: &'static [Among<Context>; 40] = &[
     Among("ολογιων", -1, 3, None),
 ];
 
-static A_2: &'static [Among<Context>; 31] = &[
+static A_2: &[Among<Context>; 31] = &[
     Among("π", -1, 2, None),
     Among("ιμπ", 0, 2, None),
     Among("ρ", -1, 2, None),
@@ -139,7 +141,7 @@ static A_2: &'static [Among<Context>; 31] = &[
     Among("συναθρο", 29, 1, None),
 ];
 
-static A_3: &'static [Among<Context>; 14] = &[
+static A_3: &[Among<Context>; 14] = &[
     Among("ιζεσ", -1, 1, None),
     Among("ιζεισ", -1, 1, None),
     Among("ιζω", -1, 1, None),
@@ -156,7 +158,7 @@ static A_3: &'static [Among<Context>; 14] = &[
     Among("ιζαν", -1, 1, None),
 ];
 
-static A_4: &'static [Among<Context>; 8] = &[
+static A_4: &[Among<Context>; 8] = &[
     Among("σ", -1, 1, None),
     Among("χ", -1, 1, None),
     Among("υψ", -1, 1, None),
@@ -167,7 +169,7 @@ static A_4: &'static [Among<Context>; 8] = &[
     Among("εν", -1, 1, None),
 ];
 
-static A_5: &'static [Among<Context>; 7] = &[
+static A_5: &[Among<Context>; 7] = &[
     Among("ωθηκεσ", -1, 1, None),
     Among("ωθηκα", -1, 1, None),
     Among("ωθηκατε", -1, 1, None),
@@ -177,7 +179,7 @@ static A_5: &'static [Among<Context>; 7] = &[
     Among("ωθηκαν", -1, 1, None),
 ];
 
-static A_6: &'static [Among<Context>; 32] = &[
+static A_6: &[Among<Context>; 32] = &[
     Among("π", -1, 2, None),
     Among("λαρ", -1, 2, None),
     Among("δημοκρατ", -1, 2, None),
@@ -212,7 +214,7 @@ static A_6: &'static [Among<Context>; 32] = &[
     Among("ολο", -1, 2, None),
 ];
 
-static A_7: &'static [Among<Context>; 7] = &[
+static A_7: &[Among<Context>; 7] = &[
     Among("ισεσ", -1, 1, None),
     Among("ισα", -1, 1, None),
     Among("ισε", -1, 1, None),
@@ -222,7 +224,7 @@ static A_7: &'static [Among<Context>; 7] = &[
     Among("ισαν", -1, 1, None),
 ];
 
-static A_8: &'static [Among<Context>; 19] = &[
+static A_8: &[Among<Context>; 19] = &[
     Among("ξαναπα", -1, 1, None),
     Among("επα", -1, 1, None),
     Among("περιπα", -1, 1, None),
@@ -244,7 +246,7 @@ static A_8: &'static [Among<Context>; 19] = &[
     Among("συναθρο", 17, 1, None),
 ];
 
-static A_9: &'static [Among<Context>; 7] = &[
+static A_9: &[Among<Context>; 7] = &[
     Among("ισεισ", -1, 1, None),
     Among("ισω", -1, 1, None),
     Among("ισετε", -1, 1, None),
@@ -254,7 +256,7 @@ static A_9: &'static [Among<Context>; 7] = &[
     Among("ισουν", -1, 1, None),
 ];
 
-static A_10: &'static [Among<Context>; 40] = &[
+static A_10: &[Among<Context>; 40] = &[
     Among("π", -1, 2, None),
     Among("ευπ", 0, 2, None),
     Among("απ", 0, 2, None),
@@ -297,7 +299,7 @@ static A_10: &'static [Among<Context>; 40] = &[
     Among("συναθρο", -1, 1, None),
 ];
 
-static A_11: &'static [Among<Context>; 11] = &[
+static A_11: &[Among<Context>; 11] = &[
     Among("ιστουσ", -1, 1, None),
     Among("ιστεσ", -1, 1, None),
     Among("ιστησ", -1, 1, None),
@@ -311,7 +313,7 @@ static A_11: &'static [Among<Context>; 11] = &[
     Among("ιστο", -1, 1, None),
 ];
 
-static A_12: &'static [Among<Context>; 7] = &[
+static A_12: &[Among<Context>; 7] = &[
     Among("σε", -1, 1, None),
     Among("μετασε", 0, 1, None),
     Among("μικροσε", 0, 1, None),
@@ -321,7 +323,7 @@ static A_12: &'static [Among<Context>; 7] = &[
     Among("αντιδανε", 5, 2, None),
 ];
 
-static A_13: &'static [Among<Context>; 10] = &[
+static A_13: &[Among<Context>; 10] = &[
     Among("τοπικ", -1, 7, None),
     Among("σκεπτικ", -1, 6, None),
     Among("γνωστικ", -1, 3, None),
@@ -334,7 +336,7 @@ static A_13: &'static [Among<Context>; 10] = &[
     Among("βυζαντιν", -1, 9, None),
 ];
 
-static A_14: &'static [Among<Context>; 6] = &[
+static A_14: &[Among<Context>; 6] = &[
     Among("ισμουσ", -1, 1, None),
     Among("ισμοσ", -1, 1, None),
     Among("ισμου", -1, 1, None),
@@ -343,19 +345,19 @@ static A_14: &'static [Among<Context>; 6] = &[
     Among("ισμο", -1, 1, None),
 ];
 
-static A_15: &'static [Among<Context>; 2] = &[
+static A_15: &[Among<Context>; 2] = &[
     Among("σ", -1, 1, None),
     Among("χ", -1, 1, None),
 ];
 
-static A_16: &'static [Among<Context>; 4] = &[
+static A_16: &[Among<Context>; 4] = &[
     Among("αρακια", -1, 1, None),
     Among("ουδακια", -1, 1, None),
     Among("αρακι", -1, 1, None),
     Among("ουδακι", -1, 1, None),
 ];
 
-static A_17: &'static [Among<Context>; 46] = &[
+static A_17: &[Among<Context>; 46] = &[
     Among("π", -1, 2, None),
     Among("κατραπ", 0, 1, None),
     Among("ρ", -1, 1, None),
@@ -404,7 +406,7 @@ static A_17: &'static [Among<Context>; 46] = &[
     Among("κον", -1, 1, None),
 ];
 
-static A_18: &'static [Among<Context>; 8] = &[
+static A_18: &[Among<Context>; 8] = &[
     Among("ιτσασ", -1, 1, None),
     Among("ιτσεσ", -1, 1, None),
     Among("ιτσα", -1, 1, None),
@@ -415,25 +417,25 @@ static A_18: &'static [Among<Context>; 8] = &[
     Among("ιτσων", -1, 1, None),
 ];
 
-static A_19: &'static [Among<Context>; 4] = &[
+static A_19: &[Among<Context>; 4] = &[
     Among("ιρ", -1, 1, None),
     Among("ψαλ", -1, 1, None),
     Among("αιφν", -1, 1, None),
     Among("ολο", -1, 1, None),
 ];
 
-static A_20: &'static [Among<Context>; 2] = &[
+static A_20: &[Among<Context>; 2] = &[
     Among("ε", -1, 1, None),
     Among("παιχν", -1, 1, None),
 ];
 
-static A_21: &'static [Among<Context>; 3] = &[
+static A_21: &[Among<Context>; 3] = &[
     Among("ιδια", -1, 1, None),
     Among("ιδιων", -1, 1, None),
     Among("ιδιο", -1, 1, None),
 ];
 
-static A_22: &'static [Among<Context>; 7] = &[
+static A_22: &[Among<Context>; 7] = &[
     Among("ρ", -1, 1, None),
     Among("ιβ", -1, 1, None),
     Among("δ", -1, 1, None),
@@ -443,19 +445,19 @@ static A_22: &'static [Among<Context>; 7] = &[
     Among("μην", -1, 1, None),
 ];
 
-static A_23: &'static [Among<Context>; 4] = &[
+static A_23: &[Among<Context>; 4] = &[
     Among("ισκοσ", -1, 1, None),
     Among("ισκου", -1, 1, None),
     Among("ισκε", -1, 1, None),
     Among("ισκο", -1, 1, None),
 ];
 
-static A_24: &'static [Among<Context>; 2] = &[
+static A_24: &[Among<Context>; 2] = &[
     Among("αδεσ", -1, 1, None),
     Among("αδων", -1, 1, None),
 ];
 
-static A_25: &'static [Among<Context>; 10] = &[
+static A_25: &[Among<Context>; 10] = &[
     Among("μπαμπ", -1, -1, None),
     Among("κυρ", -1, -1, None),
     Among("πατερ", -1, -1, None),
@@ -468,12 +470,12 @@ static A_25: &'static [Among<Context>; 10] = &[
     Among("μαν", -1, -1, None),
 ];
 
-static A_26: &'static [Among<Context>; 2] = &[
+static A_26: &[Among<Context>; 2] = &[
     Among("εδεσ", -1, 1, None),
     Among("εδων", -1, 1, None),
 ];
 
-static A_27: &'static [Among<Context>; 8] = &[
+static A_27: &[Among<Context>; 8] = &[
     Among("κρασπ", -1, 1, None),
     Among("υπ", -1, 1, None),
     Among("δαπ", -1, 1, None),
@@ -484,12 +486,12 @@ static A_27: &'static [Among<Context>; 8] = &[
     Among("μιλ", -1, 1, None),
 ];
 
-static A_28: &'static [Among<Context>; 2] = &[
+static A_28: &[Among<Context>; 2] = &[
     Among("ουδεσ", -1, 1, None),
     Among("ουδων", -1, 1, None),
 ];
 
-static A_29: &'static [Among<Context>; 15] = &[
+static A_29: &[Among<Context>; 15] = &[
     Among("σπ", -1, 1, None),
     Among("φρ", -1, 1, None),
     Among("σ", -1, 1, None),
@@ -507,12 +509,12 @@ static A_29: &'static [Among<Context>; 15] = &[
     Among("πλεξ", -1, 1, None),
 ];
 
-static A_30: &'static [Among<Context>; 2] = &[
+static A_30: &[Among<Context>; 2] = &[
     Among("εωσ", -1, 1, None),
     Among("εων", -1, 1, None),
 ];
 
-static A_31: &'static [Among<Context>; 8] = &[
+static A_31: &[Among<Context>; 8] = &[
     Among("π", -1, 1, None),
     Among("παρ", -1, 1, None),
     Among("δ", -1, 1, None),
@@ -523,20 +525,20 @@ static A_31: &'static [Among<Context>; 8] = &[
     Among("ν", -1, 1, None),
 ];
 
-static A_32: &'static [Among<Context>; 3] = &[
+static A_32: &[Among<Context>; 3] = &[
     Among("ιου", -1, 1, None),
     Among("ια", -1, 1, None),
     Among("ιων", -1, 1, None),
 ];
 
-static A_33: &'static [Among<Context>; 4] = &[
+static A_33: &[Among<Context>; 4] = &[
     Among("ικου", -1, 1, None),
     Among("ικα", -1, 1, None),
     Among("ικων", -1, 1, None),
     Among("ικο", -1, 1, None),
 ];
 
-static A_34: &'static [Among<Context>; 36] = &[
+static A_34: &[Among<Context>; 36] = &[
     Among("καλπ", -1, 1, None),
     Among("γερ", -1, 1, None),
     Among("πλιατσ", -1, 1, None),
@@ -575,7 +577,7 @@ static A_34: &'static [Among<Context>; 36] = &[
     Among("φιλον", -1, 1, None),
 ];
 
-static A_35: &'static [Among<Context>; 5] = &[
+static A_35: &[Among<Context>; 5] = &[
     Among("ουσαμε", -1, 1, None),
     Among("ησαμε", -1, 1, None),
     Among("αγαμε", -1, 1, None),
@@ -583,7 +585,7 @@ static A_35: &'static [Among<Context>; 5] = &[
     Among("ηθηκαμε", 3, 1, None),
 ];
 
-static A_36: &'static [Among<Context>; 12] = &[
+static A_36: &[Among<Context>; 12] = &[
     Among("αναπ", -1, 1, None),
     Among("πικρ", -1, 1, None),
     Among("αποστ", -1, 1, None),
@@ -598,12 +600,12 @@ static A_36: &'static [Among<Context>; 12] = &[
     Among("ουλ", -1, 1, None),
 ];
 
-static A_37: &'static [Among<Context>; 2] = &[
+static A_37: &[Among<Context>; 2] = &[
     Among("τρ", -1, 1, None),
     Among("τσ", -1, 1, None),
 ];
 
-static A_38: &'static [Among<Context>; 11] = &[
+static A_38: &[Among<Context>; 11] = &[
     Among("ουσανε", -1, 1, None),
     Among("ησανε", -1, 1, None),
     Among("ουντανε", -1, 1, None),
@@ -617,7 +619,7 @@ static A_38: &'static [Among<Context>; 11] = &[
     Among("ηθηκανε", 9, 1, None),
 ];
 
-static A_39: &'static [Among<Context>; 95] = &[
+static A_39: &[Among<Context>; 95] = &[
     Among("π", -1, 1, None),
     Among("σπ", 0, 1, None),
     Among("πολυδαπ", 0, 1, None),
@@ -715,7 +717,7 @@ static A_39: &'static [Among<Context>; 95] = &[
     Among("αμερικαν", 93, 1, None),
 ];
 
-static A_40: &'static [Among<Context>; 31] = &[
+static A_40: &[Among<Context>; 31] = &[
     Among("πυρ", -1, 1, None),
     Among("ευρ", -1, 1, None),
     Among("χωρ", -1, 1, None),
@@ -749,7 +751,7 @@ static A_40: &'static [Among<Context>; 31] = &[
     Among("ρον", -1, 1, None),
 ];
 
-static A_41: &'static [Among<Context>; 25] = &[
+static A_41: &[Among<Context>; 25] = &[
     Among("σερπ", -1, 1, None),
     Among("κοπ", -1, 1, None),
     Among("θαρρ", -1, 1, None),
@@ -777,17 +779,17 @@ static A_41: &'static [Among<Context>; 25] = &[
     Among("βαρον", -1, 1, None),
 ];
 
-static A_42: &'static [Among<Context>; 2] = &[
+static A_42: &[Among<Context>; 2] = &[
     Among("ωντασ", -1, 1, None),
     Among("οντασ", -1, 1, None),
 ];
 
-static A_43: &'static [Among<Context>; 2] = &[
+static A_43: &[Among<Context>; 2] = &[
     Among("ομαστε", -1, 1, None),
     Among("ιομαστε", 0, 1, None),
 ];
 
-static A_44: &'static [Among<Context>; 6] = &[
+static A_44: &[Among<Context>; 6] = &[
     Among("π", -1, 1, None),
     Among("απ", 0, 1, None),
     Among("ακαταπ", 1, 1, None),
@@ -796,7 +798,7 @@ static A_44: &'static [Among<Context>; 6] = &[
     Among("αμεταμφ", -1, 1, None),
 ];
 
-static A_45: &'static [Among<Context>; 9] = &[
+static A_45: &[Among<Context>; 9] = &[
     Among("αρ", -1, 1, None),
     Among("νισ", -1, 1, None),
     Among("ζ", -1, 1, None),
@@ -808,13 +810,13 @@ static A_45: &'static [Among<Context>; 9] = &[
     Among("προ", -1, 1, None),
 ];
 
-static A_46: &'static [Among<Context>; 3] = &[
+static A_46: &[Among<Context>; 3] = &[
     Among("ηθηκεσ", -1, 1, None),
     Among("ηθηκα", -1, 1, None),
     Among("ηθηκε", -1, 1, None),
 ];
 
-static A_47: &'static [Among<Context>; 6] = &[
+static A_47: &[Among<Context>; 6] = &[
     Among("σφ", -1, 1, None),
     Among("ναρθ", -1, 1, None),
     Among("πιθ", -1, 1, None),
@@ -823,7 +825,7 @@ static A_47: &'static [Among<Context>; 6] = &[
     Among("σκωλ", -1, 1, None),
 ];
 
-static A_48: &'static [Among<Context>; 5] = &[
+static A_48: &[Among<Context>; 5] = &[
     Among("θ", -1, 1, None),
     Among("προσθ", 0, 1, None),
     Among("παρακαταθ", 0, 1, None),
@@ -831,13 +833,13 @@ static A_48: &'static [Among<Context>; 5] = &[
     Among("συνθ", 0, 1, None),
 ];
 
-static A_49: &'static [Among<Context>; 3] = &[
+static A_49: &[Among<Context>; 3] = &[
     Among("ηκεσ", -1, 1, None),
     Among("ηκα", -1, 1, None),
     Among("ηκε", -1, 1, None),
 ];
 
-static A_50: &'static [Among<Context>; 12] = &[
+static A_50: &[Among<Context>; 12] = &[
     Among("βλεπ", -1, 1, None),
     Among("ποδαρ", -1, 1, None),
     Among("πρωτ", -1, 1, None),
@@ -852,7 +854,7 @@ static A_50: &'static [Among<Context>; 12] = &[
     Among("ομ", -1, 1, None),
 ];
 
-static A_51: &'static [Among<Context>; 25] = &[
+static A_51: &[Among<Context>; 25] = &[
     Among("εκλιπ", -1, 1, None),
     Among("ρ", -1, 1, None),
     Among("αναρρ", 1, 1, None),
@@ -880,13 +882,13 @@ static A_51: &'static [Among<Context>; 25] = &[
     Among("υποτειν", -1, 1, None),
 ];
 
-static A_52: &'static [Among<Context>; 3] = &[
+static A_52: &[Among<Context>; 3] = &[
     Among("ουσεσ", -1, 1, None),
     Among("ουσα", -1, 1, None),
     Among("ουσε", -1, 1, None),
 ];
 
-static A_53: &'static [Among<Context>; 12] = &[
+static A_53: &[Among<Context>; 12] = &[
     Among("ρπ", -1, 1, None),
     Among("πρ", -1, 1, None),
     Among("φρ", -1, 1, None),
@@ -901,7 +903,7 @@ static A_53: &'static [Among<Context>; 12] = &[
     Among("σμην", -1, 1, None),
 ];
 
-static A_54: &'static [Among<Context>; 44] = &[
+static A_54: &[Among<Context>; 44] = &[
     Among("π", -1, 1, None),
     Among("ασπ", 0, 1, None),
     Among("ανυπ", 0, 1, None),
@@ -948,19 +950,19 @@ static A_54: &'static [Among<Context>; 44] = &[
     Among("δερβεν", 42, 1, None),
 ];
 
-static A_55: &'static [Among<Context>; 3] = &[
+static A_55: &[Among<Context>; 3] = &[
     Among("αγεσ", -1, 1, None),
     Among("αγα", -1, 1, None),
     Among("αγε", -1, 1, None),
 ];
 
-static A_56: &'static [Among<Context>; 3] = &[
+static A_56: &[Among<Context>; 3] = &[
     Among("ησου", -1, 1, None),
     Among("ησα", -1, 1, None),
     Among("ησε", -1, 1, None),
 ];
 
-static A_57: &'static [Among<Context>; 6] = &[
+static A_57: &[Among<Context>; 6] = &[
     Among("ν", -1, 1, None),
     Among("επταν", 0, 1, None),
     Among("δωδεκαν", 0, 1, None),
@@ -969,7 +971,7 @@ static A_57: &'static [Among<Context>; 6] = &[
     Among("ερημον", 0, 1, None),
 ];
 
-static A_58: &'static [Among<Context>; 10] = &[
+static A_58: &[Among<Context>; 10] = &[
     Among("χρ", -1, 1, None),
     Among("δυσχρ", 0, 1, None),
     Among("ευχρ", 0, 1, None),
@@ -982,13 +984,13 @@ static A_58: &'static [Among<Context>; 10] = &[
     Among("αειμν", -1, 1, None),
 ];
 
-static A_59: &'static [Among<Context>; 3] = &[
+static A_59: &[Among<Context>; 3] = &[
     Among("ουνε", -1, 1, None),
     Among("ησουνε", 0, 1, None),
     Among("ηθουνε", 0, 1, None),
 ];
 
-static A_60: &'static [Among<Context>; 6] = &[
+static A_60: &[Among<Context>; 6] = &[
     Among("ρ", -1, 1, None),
     Among("στραβομουτσ", -1, 1, None),
     Among("κακομουτσ", -1, 1, None),
@@ -997,13 +999,13 @@ static A_60: &'static [Among<Context>; 6] = &[
     Among("εξων", 4, 1, None),
 ];
 
-static A_61: &'static [Among<Context>; 3] = &[
+static A_61: &[Among<Context>; 3] = &[
     Among("ουμε", -1, 1, None),
     Among("ησουμε", 0, 1, None),
     Among("ηθουμε", 0, 1, None),
 ];
 
-static A_62: &'static [Among<Context>; 7] = &[
+static A_62: &[Among<Context>; 7] = &[
     Among("ασουσ", -1, 1, None),
     Among("παρασουσ", 0, 1, None),
     Among("αλλοσουσ", -1, 1, None),
@@ -1013,13 +1015,13 @@ static A_62: &'static [Among<Context>; 7] = &[
     Among("ωριοπλ", -1, 1, None),
 ];
 
-static A_63: &'static [Among<Context>; 3] = &[
+static A_63: &[Among<Context>; 3] = &[
     Among("ματοσ", -1, 1, None),
     Among("ματα", -1, 1, None),
     Among("ματων", -1, 1, None),
 ];
 
-static A_64: &'static [Among<Context>; 84] = &[
+static A_64: &[Among<Context>; 84] = &[
     Among("υσ", -1, 1, None),
     Among("ουσ", 0, 1, None),
     Among("ασ", -1, 1, None),
@@ -1106,7 +1108,7 @@ static A_64: &'static [Among<Context>; 84] = &[
     Among("ο", -1, 1, None),
 ];
 
-static A_65: &'static [Among<Context>; 8] = &[
+static A_65: &[Among<Context>; 8] = &[
     Among("εστερ", -1, 1, None),
     Among("υτερ", -1, 1, None),
     Among("ωτερ", -1, 1, None),
@@ -1117,11 +1119,11 @@ static A_65: &'static [Among<Context>; 8] = &[
     Among("οτατ", -1, 1, None),
 ];
 
-static G_v: &'static [u8; 4] = &[81, 65, 16, 1];
+static G_v: & [u8; 4] = &[81, 65, 16, 1];
 
-static G_v2: &'static [u8; 4] = &[81, 65, 0, 1];
+static G_v2: & [u8; 4] = &[81, 65, 0, 1];
 
-fn r_tolower(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_tolower(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     'replab0: loop{
         let v_1 = env.limit - env.cursor;
@@ -1218,7 +1220,7 @@ fn r_tolower(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_1(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_1(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_1, context);
@@ -1266,7 +1268,7 @@ fn r_step_1(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_s1(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_s1(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     if env.find_among_b(A_3, context) == 0 {
@@ -1296,7 +1298,7 @@ fn r_step_s1(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_s2(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_s2(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_5, context) == 0 {
         return false;
@@ -1316,7 +1318,7 @@ fn r_step_s2(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_s3(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_s3(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     'lab0: loop {
         let v_1 = env.limit - env.cursor;
@@ -1363,7 +1365,7 @@ fn r_step_s3(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_s4(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_s4(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_9, context) == 0 {
         return false;
@@ -1373,7 +1375,7 @@ fn r_step_s4(env: &mut SnowballEnv, context: &mut Context) -> bool {
     context.b_test1 = false;
     env.ket = env.cursor;
     env.bra = env.cursor;
-    if (env.cursor - 3 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 5 as u8 || ((-2145255424 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+    if (env.cursor - 3 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 5 || ((-2145255424  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0) {
         return false;
     }
 
@@ -1387,7 +1389,7 @@ fn r_step_s4(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_s5(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_s5(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     if env.find_among_b(A_11, context) == 0 {
@@ -1417,7 +1419,7 @@ fn r_step_s5(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_s6(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_s6(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     if env.find_among_b(A_14, context) == 0 {
@@ -1431,7 +1433,7 @@ fn r_step_s6(env: &mut SnowballEnv, context: &mut Context) -> bool {
         'lab1: loop {
             env.ket = env.cursor;
             env.bra = env.cursor;
-            if (env.cursor - 3 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 181 as u8) {
+            if (env.cursor - 3 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 181) {
                 break 'lab1;
             }
 
@@ -1455,7 +1457,7 @@ fn r_step_s6(env: &mut SnowballEnv, context: &mut Context) -> bool {
         }
         env.cursor = env.limit - v_1;
         env.ket = env.cursor;
-        if (env.cursor - 9 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 186 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 189 as u8)) {
+        if (env.cursor - 9 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 186 && env.current.as_bytes()[(env.cursor - 1) as usize] != 189)) {
             return false;
         }
 
@@ -1502,9 +1504,9 @@ fn r_step_s6(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_s7(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_s7(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 9 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 177 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 185 as u8)) {
+    if (env.cursor - 9 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 177 && env.current.as_bytes()[(env.cursor - 1) as usize] != 185)) {
         return false;
     }
 
@@ -1516,7 +1518,7 @@ fn r_step_s7(env: &mut SnowballEnv, context: &mut Context) -> bool {
     context.b_test1 = false;
     env.ket = env.cursor;
     env.bra = env.cursor;
-    if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 131 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 135 as u8)) {
+    if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 131 && env.current.as_bytes()[(env.cursor - 1) as usize] != 135)) {
         return false;
     }
 
@@ -1530,7 +1532,7 @@ fn r_step_s7(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_s8(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_s8(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     if env.find_among_b(A_18, context) == 0 {
@@ -1574,9 +1576,9 @@ fn r_step_s8(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_s9(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_s9(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 7 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 5 as u8 || ((-1610481664 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+    if (env.cursor - 7 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 5 || ((-1610481664  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0) {
         return false;
     }
 
@@ -1603,7 +1605,7 @@ fn r_step_s9(env: &mut SnowballEnv, context: &mut Context) -> bool {
         env.cursor = env.limit - v_1;
         env.ket = env.cursor;
         env.bra = env.cursor;
-        if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 181 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 189 as u8)) {
+        if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 181 && env.current.as_bytes()[(env.cursor - 1) as usize] != 189)) {
             return false;
         }
 
@@ -1616,7 +1618,7 @@ fn r_step_s9(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_s10(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_s10(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_23, context) == 0 {
         return false;
@@ -1636,9 +1638,9 @@ fn r_step_s10(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_2a(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_2a(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 7 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 131 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 189 as u8)) {
+    if (env.cursor - 7 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 131 && env.current.as_bytes()[(env.cursor - 1) as usize] != 189)) {
         return false;
     }
 
@@ -1662,9 +1664,9 @@ fn r_step_2a(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_2b(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_2b(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 7 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 131 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 189 as u8)) {
+    if (env.cursor - 7 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 131 && env.current.as_bytes()[(env.cursor - 1) as usize] != 189)) {
         return false;
     }
 
@@ -1675,7 +1677,7 @@ fn r_step_2b(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.slice_del();
     env.ket = env.cursor;
     env.bra = env.cursor;
-    if (env.cursor - 3 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 128 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 187 as u8)) {
+    if (env.cursor - 3 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 128 && env.current.as_bytes()[(env.cursor - 1) as usize] != 187)) {
         return false;
     }
 
@@ -1686,9 +1688,9 @@ fn r_step_2b(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_2c(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_2c(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 9 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 131 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 189 as u8)) {
+    if (env.cursor - 9 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 131 && env.current.as_bytes()[(env.cursor - 1) as usize] != 189)) {
         return false;
     }
 
@@ -1706,9 +1708,9 @@ fn r_step_2c(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_2d(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_2d(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 5 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 131 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 189 as u8)) {
+    if (env.cursor - 5 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 131 && env.current.as_bytes()[(env.cursor - 1) as usize] != 189)) {
         return false;
     }
 
@@ -1730,7 +1732,7 @@ fn r_step_2d(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_3(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_3(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_32, context) == 0 {
         return false;
@@ -1747,7 +1749,7 @@ fn r_step_3(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_4(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_4(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_33, context) == 0 {
         return false;
@@ -1781,7 +1783,7 @@ fn r_step_4(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5a(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5a(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.limit - env.cursor;
     'lab0: loop {
         env.ket = env.cursor;
@@ -1799,7 +1801,7 @@ fn r_step_5a(env: &mut SnowballEnv, context: &mut Context) -> bool {
     let v_2 = env.limit - env.cursor;
     'lab1: loop {
         env.ket = env.cursor;
-        if (env.cursor - 9 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 181 as u8) {
+        if (env.cursor - 9 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 181) {
             break 'lab1;
         }
 
@@ -1831,11 +1833,11 @@ fn r_step_5a(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5b(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5b(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.limit - env.cursor;
     'lab0: loop {
         env.ket = env.cursor;
-        if (env.cursor - 9 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 181 as u8) {
+        if (env.cursor - 9 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 181) {
             break 'lab0;
         }
 
@@ -1847,7 +1849,7 @@ fn r_step_5b(env: &mut SnowballEnv, context: &mut Context) -> bool {
         context.b_test1 = false;
         env.ket = env.cursor;
         env.bra = env.cursor;
-        if (env.cursor - 3 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 129 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 131 as u8)) {
+        if (env.cursor - 3 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 129 && env.current.as_bytes()[(env.cursor - 1) as usize] != 131)) {
             break 'lab0;
         }
 
@@ -1894,7 +1896,7 @@ fn r_step_5b(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5c(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5c(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.limit - env.cursor;
     'lab0: loop {
         env.ket = env.cursor;
@@ -1950,9 +1952,9 @@ fn r_step_5c(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5d(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5d(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 9 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 131 as u8) {
+    if (env.cursor - 9 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 131) {
         return false;
     }
 
@@ -1988,9 +1990,9 @@ fn r_step_5d(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5e(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5e(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 11 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 181 as u8) {
+    if (env.cursor - 11 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 181) {
         return false;
     }
 
@@ -2012,7 +2014,7 @@ fn r_step_5e(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5f(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5f(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.limit - env.cursor;
     'lab0: loop {
         env.ket = env.cursor;
@@ -2024,7 +2026,7 @@ fn r_step_5f(env: &mut SnowballEnv, context: &mut Context) -> bool {
         context.b_test1 = false;
         env.ket = env.cursor;
         env.bra = env.cursor;
-        if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 128 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 134 as u8)) {
+        if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 128 && env.current.as_bytes()[(env.cursor - 1) as usize] != 134)) {
             break 'lab0;
         }
 
@@ -2057,7 +2059,7 @@ fn r_step_5f(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5g(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5g(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.limit - env.cursor;
     'lab0: loop {
         env.ket = env.cursor;
@@ -2091,7 +2093,7 @@ fn r_step_5g(env: &mut SnowballEnv, context: &mut Context) -> bool {
         env.cursor = env.limit - v_2;
         env.ket = env.cursor;
         env.bra = env.cursor;
-        if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 184 as u8) {
+        if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 184) {
             return false;
         }
 
@@ -2107,7 +2109,7 @@ fn r_step_5g(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5h(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5h(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_52, context) == 0 {
         return false;
@@ -2141,7 +2143,7 @@ fn r_step_5h(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5i(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5i(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     if env.find_among_b(A_55, context) == 0 {
@@ -2196,7 +2198,7 @@ fn r_step_5i(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5j(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5j(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_56, context) == 0 {
         return false;
@@ -2206,7 +2208,7 @@ fn r_step_5j(env: &mut SnowballEnv, context: &mut Context) -> bool {
     context.b_test1 = false;
     env.ket = env.cursor;
     env.bra = env.cursor;
-    if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 189 as u8) {
+    if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 189) {
         return false;
     }
 
@@ -2220,7 +2222,7 @@ fn r_step_5j(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5k(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5k(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if !env.eq_s_b(&"ηστε") {
         return false;
@@ -2240,9 +2242,9 @@ fn r_step_5k(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5l(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5l(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 7 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 181 as u8) {
+    if (env.cursor - 7 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 181) {
         return false;
     }
 
@@ -2264,9 +2266,9 @@ fn r_step_5l(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_5m(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_5m(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 7 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 181 as u8) {
+    if (env.cursor - 7 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 181) {
         return false;
     }
 
@@ -2288,7 +2290,7 @@ fn r_step_5m(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_6(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_6(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.limit - env.cursor;
     'lab0: loop {
         env.ket = env.cursor;
@@ -2312,9 +2314,9 @@ fn r_step_6(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_step_7(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_step_7(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
-    if (env.cursor - 7 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 129 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 132 as u8)) {
+    if (env.cursor - 7 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 129 && env.current.as_bytes()[(env.cursor - 1) as usize] != 132)) {
         return false;
     }
 
@@ -2326,7 +2328,7 @@ fn r_step_7(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context {
         b_test1: false,
     };
@@ -2335,7 +2337,7 @@ pub fn stem(env: &mut SnowballEnv) -> bool {
     let v_1 = env.limit - env.cursor;
     r_tolower(env, context);
     env.cursor = env.limit - v_1;
-    if (env.current.chars().count() as i32) < 3 {
+    if (env.current.chars().count() ) < 3 {
         return false;
     }
     context.b_test1 = true;

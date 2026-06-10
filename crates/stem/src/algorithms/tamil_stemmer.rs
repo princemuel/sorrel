@@ -1,10 +1,12 @@
 //! Generated from tamil.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::SnowballEnv;
 use crate::snowball::Among;
 
@@ -13,14 +15,14 @@ struct Context {
     b_found_vetrumai_urupu: bool,
 }
 
-static A_0: &'static [Among<Context>; 4] = &[
+static A_0: &[Among<Context>; 4] = &[
     Among("\u{BB5}\u{BC1}", -1, 3, None),
     Among("\u{BB5}\u{BC2}", -1, 4, None),
     Among("\u{BB5}\u{BCA}", -1, 2, None),
     Among("\u{BB5}\u{BCB}", -1, 1, None),
 ];
 
-static A_1: &'static [Among<Context>; 10] = &[
+static A_1: &[Among<Context>; 10] = &[
     Among("\u{B95}", -1, -1, None),
     Among("\u{B99}", -1, -1, None),
     Among("\u{B9A}", -1, -1, None),
@@ -33,13 +35,13 @@ static A_1: &'static [Among<Context>; 10] = &[
     Among("\u{BB5}", -1, -1, None),
 ];
 
-static A_2: &'static [Among<Context>; 3] = &[
+static A_2: &[Among<Context>; 3] = &[
     Among("\u{BC0}", -1, -1, None),
     Among("\u{BC8}", -1, -1, None),
     Among("\u{BBF}", -1, -1, None),
 ];
 
-static A_3: &'static [Among<Context>; 8] = &[
+static A_3: &[Among<Context>; 8] = &[
     Among("\u{BC0}", -1, -1, None),
     Among("\u{BC1}", -1, -1, None),
     Among("\u{BC2}", -1, -1, None),
@@ -50,13 +52,13 @@ static A_3: &'static [Among<Context>; 8] = &[
     Among("\u{BBF}", -1, -1, None),
 ];
 
-static A_4: &'static [Among<Context>; 3] = &[
+static A_4: &[Among<Context>; 3] = &[
     Among("", -1, 2, None),
     Among("\u{BC8}", 0, 1, None),
     Among("\u{BCD}", 0, 1, None),
 ];
 
-static A_5: &'static [Among<Context>; 17] = &[
+static A_5: &[Among<Context>; 17] = &[
     Among("\u{BA9}\u{BC1}", -1, 8, None),
     Among("\u{BC1}\u{B95}\u{BCD}", -1, 7, None),
     Among("\u{BC1}\u{B95}\u{BCD}\u{B95}\u{BCD}", -1, 7, None),
@@ -76,7 +78,7 @@ static A_5: &'static [Among<Context>; 17] = &[
     Among("\u{BB5}", -1, 1, None),
 ];
 
-static A_6: &'static [Among<Context>; 6] = &[
+static A_6: &[Among<Context>; 6] = &[
     Among("\u{B95}", -1, -1, None),
     Among("\u{B9A}", -1, -1, None),
     Among("\u{B9F}", -1, -1, None),
@@ -85,7 +87,7 @@ static A_6: &'static [Among<Context>; 6] = &[
     Among("\u{BB1}", -1, -1, None),
 ];
 
-static A_7: &'static [Among<Context>; 6] = &[
+static A_7: &[Among<Context>; 6] = &[
     Among("\u{B95}", -1, -1, None),
     Among("\u{B9A}", -1, -1, None),
     Among("\u{B9F}", -1, -1, None),
@@ -94,7 +96,7 @@ static A_7: &'static [Among<Context>; 6] = &[
     Among("\u{BB1}", -1, -1, None),
 ];
 
-static A_8: &'static [Among<Context>; 11] = &[
+static A_8: &[Among<Context>; 11] = &[
     Among("\u{B9E}", -1, -1, None),
     Among("\u{BA3}", -1, -1, None),
     Among("\u{BA8}", -1, -1, None),
@@ -108,7 +110,7 @@ static A_8: &'static [Among<Context>; 11] = &[
     Among("\u{BB5}", -1, -1, None),
 ];
 
-static A_9: &'static [Among<Context>; 9] = &[
+static A_9: &[Among<Context>; 9] = &[
     Among("\u{BC0}", -1, -1, None),
     Among("\u{BC1}", -1, -1, None),
     Among("\u{BC2}", -1, -1, None),
@@ -120,13 +122,13 @@ static A_9: &'static [Among<Context>; 9] = &[
     Among("\u{BBF}", -1, -1, None),
 ];
 
-static A_10: &'static [Among<Context>; 3] = &[
+static A_10: &[Among<Context>; 3] = &[
     Among("\u{B85}", -1, -1, None),
     Among("\u{B87}", -1, -1, None),
     Among("\u{B89}", -1, -1, None),
 ];
 
-static A_11: &'static [Among<Context>; 10] = &[
+static A_11: &[Among<Context>; 10] = &[
     Among("\u{B95}", -1, -1, None),
     Among("\u{B99}", -1, -1, None),
     Among("\u{B9A}", -1, -1, None),
@@ -139,7 +141,7 @@ static A_11: &'static [Among<Context>; 10] = &[
     Among("\u{BB5}", -1, -1, None),
 ];
 
-static A_12: &'static [Among<Context>; 6] = &[
+static A_12: &[Among<Context>; 6] = &[
     Among("\u{B95}", -1, -1, None),
     Among("\u{B9A}", -1, -1, None),
     Among("\u{B9F}", -1, -1, None),
@@ -148,25 +150,25 @@ static A_12: &'static [Among<Context>; 6] = &[
     Among("\u{BB1}", -1, -1, None),
 ];
 
-static A_13: &'static [Among<Context>; 4] = &[
+static A_13: &[Among<Context>; 4] = &[
     Among("\u{B95}\u{BB3}\u{BCD}", -1, 4, None),
     Among("\u{BC1}\u{B99}\u{BCD}\u{B95}\u{BB3}\u{BCD}", 0, 1, None),
     Among("\u{B9F}\u{BCD}\u{B95}\u{BB3}\u{BCD}", 0, 3, None),
     Among("\u{BB1}\u{BCD}\u{B95}\u{BB3}\u{BCD}", 0, 2, None),
 ];
 
-static A_14: &'static [Among<Context>; 3] = &[
+static A_14: &[Among<Context>; 3] = &[
     Among("\u{BC7}", -1, -1, None),
     Among("\u{BCB}", -1, -1, None),
     Among("\u{BBE}", -1, -1, None),
 ];
 
-static A_15: &'static [Among<Context>; 2] = &[
+static A_15: &[Among<Context>; 2] = &[
     Among("\u{BAA}\u{BBF}", -1, -1, None),
     Among("\u{BB5}\u{BBF}", -1, -1, None),
 ];
 
-static A_16: &'static [Among<Context>; 8] = &[
+static A_16: &[Among<Context>; 8] = &[
     Among("\u{BC0}", -1, -1, None),
     Among("\u{BC1}", -1, -1, None),
     Among("\u{BC2}", -1, -1, None),
@@ -177,7 +179,7 @@ static A_16: &'static [Among<Context>; 8] = &[
     Among("\u{BBF}", -1, -1, None),
 ];
 
-static A_17: &'static [Among<Context>; 26] = &[
+static A_17: &[Among<Context>; 26] = &[
     Among("\u{BAA}\u{B9F}\u{BCD}\u{B9F}\u{BC1}", -1, 3, None),
     Among("\u{BB5}\u{BBF}\u{B9F}\u{BCD}\u{B9F}\u{BC1}", -1, 3, None),
     Among("\u{BAA}\u{B9F}\u{BC1}", -1, 3, None),
@@ -206,7 +208,7 @@ static A_17: &'static [Among<Context>; 26] = &[
     Among("\u{BAA}\u{BB1}\u{BCD}\u{BB1}\u{BBF}", -1, 3, None),
 ];
 
-static A_18: &'static [Among<Context>; 8] = &[
+static A_18: &[Among<Context>; 8] = &[
     Among("\u{BC0}", -1, -1, None),
     Among("\u{BC1}", -1, -1, None),
     Among("\u{BC2}", -1, -1, None),
@@ -217,7 +219,7 @@ static A_18: &'static [Among<Context>; 8] = &[
     Among("\u{BBF}", -1, -1, None),
 ];
 
-static A_19: &'static [Among<Context>; 8] = &[
+static A_19: &[Among<Context>; 8] = &[
     Among("\u{BC0}", -1, -1, None),
     Among("\u{BC1}", -1, -1, None),
     Among("\u{BC2}", -1, -1, None),
@@ -228,7 +230,7 @@ static A_19: &'static [Among<Context>; 8] = &[
     Among("\u{BBF}", -1, -1, None),
 ];
 
-static A_20: &'static [Among<Context>; 22] = &[
+static A_20: &[Among<Context>; 22] = &[
     Among("\u{BC0}", -1, 7, None),
     Among("\u{BCA}\u{B9F}\u{BC1}", -1, 2, None),
     Among("\u{BCB}\u{B9F}\u{BC1}", -1, 2, None),
@@ -253,7 +255,7 @@ static A_20: &'static [Among<Context>; 22] = &[
     Among("\u{BB5}\u{BBF}\u{B9F}", -1, 2, None),
 ];
 
-static A_21: &'static [Among<Context>; 6] = &[
+static A_21: &[Among<Context>; 6] = &[
     Among("\u{B95}", -1, -1, None),
     Among("\u{B9A}", -1, -1, None),
     Among("\u{B9F}", -1, -1, None),
@@ -262,7 +264,7 @@ static A_21: &'static [Among<Context>; 6] = &[
     Among("\u{BB1}", -1, -1, None),
 ];
 
-static A_22: &'static [Among<Context>; 6] = &[
+static A_22: &[Among<Context>; 6] = &[
     Among("\u{B95}", -1, -1, None),
     Among("\u{B9A}", -1, -1, None),
     Among("\u{B9F}", -1, -1, None),
@@ -271,7 +273,7 @@ static A_22: &'static [Among<Context>; 6] = &[
     Among("\u{BB1}", -1, -1, None),
 ];
 
-static A_23: &'static [Among<Context>; 12] = &[
+static A_23: &[Among<Context>; 12] = &[
     Among("\u{B85}", -1, -1, None),
     Among("\u{B86}", -1, -1, None),
     Among("\u{B87}", -1, -1, None),
@@ -286,7 +288,7 @@ static A_23: &'static [Among<Context>; 12] = &[
     Among("\u{B94}", -1, -1, None),
 ];
 
-static A_24: &'static [Among<Context>; 8] = &[
+static A_24: &[Among<Context>; 8] = &[
     Among("\u{BC0}", -1, -1, None),
     Among("\u{BC1}", -1, -1, None),
     Among("\u{BC2}", -1, -1, None),
@@ -297,7 +299,7 @@ static A_24: &'static [Among<Context>; 8] = &[
     Among("\u{BBF}", -1, -1, None),
 ];
 
-static A_25: &'static [Among<Context>; 46] = &[
+static A_25: &[Among<Context>; 46] = &[
     Among("\u{B95}\u{BC1}", -1, 6, None),
     Among("\u{BAA}\u{B9F}\u{BC1}", -1, 1, None),
     Among("\u{BA4}\u{BC1}", -1, 3, None),
@@ -346,7 +348,7 @@ static A_25: &'static [Among<Context>; 46] = &[
     Among("\u{BBE}", -1, 5, None),
 ];
 
-static A_26: &'static [Among<Context>; 6] = &[
+static A_26: &[Among<Context>; 6] = &[
     Among("\u{B95}\u{BBF}\u{BA9}\u{BCD}\u{BB1}\u{BCD}", -1, -1, None),
     Among("\u{BBE}\u{BA8}\u{BBF}\u{BA9}\u{BCD}\u{BB1}\u{BCD}", -1, -1, None),
     Among("\u{B95}\u{BBF}\u{BB1}\u{BCD}", -1, -1, None),
@@ -355,14 +357,14 @@ static A_26: &'static [Among<Context>; 6] = &[
     Among("\u{B95}\u{BBF}\u{BB1}", -1, -1, None),
 ];
 
-fn r_has_min_length(env: &mut SnowballEnv, context: &mut Context) -> bool {
-    return (env.current.chars().count() as i32) > 4
+fn r_has_min_length(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
+    return (env.current.chars().count() ) > 4
 }
 
-fn r_fix_va_start(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_fix_va_start(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.bra = env.cursor;
-    if (env.cursor + 5 >= env.limit || env.current.as_bytes()[(env.cursor + 5) as usize] as u8 >> 5 != 4 as u8 || ((3078 as i32 >> (env.current.as_bytes()[(env.cursor + 5) as usize] as u8 & 0x1f)) & 1) == 0) {
+    if (env.cursor + 5 >= env.limit || env.current.as_bytes()[(env.cursor + 5) as usize] >> 5 != 4 || ((3078  >> (env.current.as_bytes()[(env.cursor + 5) as usize] & 0x1f)) & 1) == 0) {
         return false;
     }
 
@@ -389,7 +391,7 @@ fn r_fix_va_start(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_fix_endings(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_fix_endings(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.cursor;
     'lab0: loop {
         'replab1: loop{
@@ -409,7 +411,7 @@ fn r_fix_endings(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_remove_question_prefixes(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_question_prefixes(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.bra = env.cursor;
     if !env.eq_s(&"\u{B8E}") {
         return false;
@@ -428,9 +430,9 @@ fn r_remove_question_prefixes(env: &mut SnowballEnv, context: &mut Context) -> b
     return true
 }
 
-fn r_fix_ending(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_fix_ending(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
-    if (env.current.chars().count() as i32) <= 3 {
+    if (env.current.chars().count() ) <= 3 {
         return false;
     }
     env.limit_backward = env.cursor;
@@ -492,7 +494,7 @@ fn r_fix_ending(env: &mut SnowballEnv, context: &mut Context) -> bool {
                     env.slice_del();
                 }
                 9 => {
-                    if (env.cursor - 2 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 136 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 141 as u8)) {among_var = 2;}
+                    if (env.cursor - 2 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 136 && env.current.as_bytes()[(env.cursor - 1) as usize] != 141)) {among_var = 2;}
                     else {
                         among_var = env.find_among_b(A_4, context);
                     }
@@ -565,9 +567,9 @@ fn r_fix_ending(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_remove_pronoun_prefixes(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_pronoun_prefixes(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.bra = env.cursor;
-    if (env.cursor + 2 >= env.limit || env.current.as_bytes()[(env.cursor + 2) as usize] as u8 >> 5 != 4 as u8 || ((672 as i32 >> (env.current.as_bytes()[(env.cursor + 2) as usize] as u8 & 0x1f)) & 1) == 0) {
+    if (env.cursor + 2 >= env.limit || env.current.as_bytes()[(env.cursor + 2) as usize] >> 5 != 4 || ((672  >> (env.current.as_bytes()[(env.cursor + 2) as usize] & 0x1f)) & 1) == 0) {
         return false;
     }
 
@@ -588,12 +590,12 @@ fn r_remove_pronoun_prefixes(env: &mut SnowballEnv, context: &mut Context) -> bo
     return true
 }
 
-fn r_remove_plural_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_plural_suffix(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.limit_backward = env.cursor;
     env.cursor = env.limit;
     env.ket = env.cursor;
-    if (env.cursor - 8 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 141 as u8) {
+    if (env.cursor - 8 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 141) {
         return false;
     }
 
@@ -633,7 +635,7 @@ fn r_remove_plural_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool 
     return true
 }
 
-fn r_remove_question_suffixes(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_question_suffixes(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_has_min_length(env, context) {
         return false;
     }
@@ -655,14 +657,14 @@ fn r_remove_question_suffixes(env: &mut SnowballEnv, context: &mut Context) -> b
     return true
 }
 
-fn r_remove_command_suffixes(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_command_suffixes(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_has_min_length(env, context) {
         return false;
     }
     env.limit_backward = env.cursor;
     env.cursor = env.limit;
     env.ket = env.cursor;
-    if (env.cursor - 5 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 191 as u8) {
+    if (env.cursor - 5 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 191) {
         return false;
     }
 
@@ -675,7 +677,7 @@ fn r_remove_command_suffixes(env: &mut SnowballEnv, context: &mut Context) -> bo
     return true
 }
 
-fn r_remove_um(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_um(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_has_min_length(env, context) {
         return false;
     }
@@ -694,7 +696,7 @@ fn r_remove_um(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_remove_common_word_endings(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_common_word_endings(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     if !r_has_min_length(env, context) {
         return false;
@@ -732,7 +734,7 @@ fn r_remove_common_word_endings(env: &mut SnowballEnv, context: &mut Context) ->
     return true
 }
 
-fn r_remove_vetrumai_urupukal(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_vetrumai_urupukal(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     context.b_found_vetrumai_urupu = false;
     if !r_has_min_length(env, context) {
@@ -745,7 +747,7 @@ fn r_remove_vetrumai_urupukal(env: &mut SnowballEnv, context: &mut Context) -> b
         'lab1: loop {
             let v_2 = env.limit - env.cursor;
             env.ket = env.cursor;
-            if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 4 as u8 || ((-2147475197 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+            if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 4 || ((-2147475197  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0) {
                 break 'lab1;
             }
 
@@ -771,7 +773,7 @@ fn r_remove_vetrumai_urupukal(env: &mut SnowballEnv, context: &mut Context) -> b
                     env.slice_from("\u{BCD}");
                 }
                 4 => {
-                    if (env.current.chars().count() as i32) < 7 {
+                    if (env.current.chars().count() ) < 7 {
                         break 'lab1;
                     }
                     env.slice_from("\u{BCD}");
@@ -858,7 +860,7 @@ fn r_remove_vetrumai_urupukal(env: &mut SnowballEnv, context: &mut Context) -> b
     return true
 }
 
-fn r_remove_tense_suffixes(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_tense_suffixes(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     'replab0: loop{
         let v_1 = env.cursor;
         'lab1: for _ in 0..1 {
@@ -873,7 +875,7 @@ fn r_remove_tense_suffixes(env: &mut SnowballEnv, context: &mut Context) -> bool
     return true
 }
 
-fn r_remove_tense_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_tense_suffix(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     let mut b_found_a_match : bool;
     b_found_a_match = false;
@@ -898,7 +900,7 @@ fn r_remove_tense_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
             2 => {
                 let v_3 = env.limit - env.cursor;
                 'lab1: loop {
-                    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 4 as u8 || ((1951712 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+                    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 4 || ((1951712  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0) {
                         break 'lab1;
                     }
 
@@ -951,7 +953,7 @@ fn r_remove_tense_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
     let v_6 = env.limit - env.cursor;
     'lab4: loop {
         env.ket = env.cursor;
-        if (env.cursor - 8 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 141 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 177 as u8)) {
+        if (env.cursor - 8 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 141 && env.current.as_bytes()[(env.cursor - 1) as usize] != 177)) {
             break 'lab4;
         }
 
@@ -969,7 +971,7 @@ fn r_remove_tense_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return b_found_a_match;
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context {
         b_found_vetrumai_urupu: false,
     };

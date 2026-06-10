@@ -1,10 +1,12 @@
 //! Generated from turkish.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::SnowballEnv;
 use crate::snowball::Among;
 
@@ -13,7 +15,7 @@ struct Context {
     b_continue_stemming_noun_suffixes: bool,
 }
 
-static A_0: &'static [Among<Context>; 10] = &[
+static A_0: &[Among<Context>; 10] = &[
     Among("m", -1, -1, None),
     Among("n", -1, -1, None),
     Among("miz", -1, -1, None),
@@ -26,105 +28,105 @@ static A_0: &'static [Among<Context>; 10] = &[
     Among("nüz", -1, -1, None),
 ];
 
-static A_1: &'static [Among<Context>; 2] = &[
+static A_1: &[Among<Context>; 2] = &[
     Among("leri", -1, -1, None),
     Among("ları", -1, -1, None),
 ];
 
-static A_2: &'static [Among<Context>; 4] = &[
+static A_2: &[Among<Context>; 4] = &[
     Among("ni", -1, -1, None),
     Among("nu", -1, -1, None),
     Among("nı", -1, -1, None),
     Among("nü", -1, -1, None),
 ];
 
-static A_3: &'static [Among<Context>; 4] = &[
+static A_3: &[Among<Context>; 4] = &[
     Among("in", -1, -1, None),
     Among("un", -1, -1, None),
     Among("ın", -1, -1, None),
     Among("ün", -1, -1, None),
 ];
 
-static A_5: &'static [Among<Context>; 2] = &[
+static A_5: &[Among<Context>; 2] = &[
     Among("na", -1, -1, None),
     Among("ne", -1, -1, None),
 ];
 
-static A_6: &'static [Among<Context>; 4] = &[
+static A_6: &[Among<Context>; 4] = &[
     Among("da", -1, -1, None),
     Among("ta", -1, -1, None),
     Among("de", -1, -1, None),
     Among("te", -1, -1, None),
 ];
 
-static A_7: &'static [Among<Context>; 2] = &[
+static A_7: &[Among<Context>; 2] = &[
     Among("nda", -1, -1, None),
     Among("nde", -1, -1, None),
 ];
 
-static A_8: &'static [Among<Context>; 4] = &[
+static A_8: &[Among<Context>; 4] = &[
     Among("dan", -1, -1, None),
     Among("tan", -1, -1, None),
     Among("den", -1, -1, None),
     Among("ten", -1, -1, None),
 ];
 
-static A_9: &'static [Among<Context>; 2] = &[
+static A_9: &[Among<Context>; 2] = &[
     Among("ndan", -1, -1, None),
     Among("nden", -1, -1, None),
 ];
 
-static A_10: &'static [Among<Context>; 2] = &[
+static A_10: &[Among<Context>; 2] = &[
     Among("la", -1, -1, None),
     Among("le", -1, -1, None),
 ];
 
-static A_11: &'static [Among<Context>; 2] = &[
+static A_11: &[Among<Context>; 2] = &[
     Among("ca", -1, -1, None),
     Among("ce", -1, -1, None),
 ];
 
-static A_12: &'static [Among<Context>; 4] = &[
+static A_12: &[Among<Context>; 4] = &[
     Among("im", -1, -1, None),
     Among("um", -1, -1, None),
     Among("ım", -1, -1, None),
     Among("üm", -1, -1, None),
 ];
 
-static A_13: &'static [Among<Context>; 4] = &[
+static A_13: &[Among<Context>; 4] = &[
     Among("sin", -1, -1, None),
     Among("sun", -1, -1, None),
     Among("sın", -1, -1, None),
     Among("sün", -1, -1, None),
 ];
 
-static A_14: &'static [Among<Context>; 4] = &[
+static A_14: &[Among<Context>; 4] = &[
     Among("iz", -1, -1, None),
     Among("uz", -1, -1, None),
     Among("ız", -1, -1, None),
     Among("üz", -1, -1, None),
 ];
 
-static A_15: &'static [Among<Context>; 4] = &[
+static A_15: &[Among<Context>; 4] = &[
     Among("siniz", -1, -1, None),
     Among("sunuz", -1, -1, None),
     Among("sınız", -1, -1, None),
     Among("sünüz", -1, -1, None),
 ];
 
-static A_16: &'static [Among<Context>; 2] = &[
+static A_16: &[Among<Context>; 2] = &[
     Among("lar", -1, -1, None),
     Among("ler", -1, -1, None),
 ];
 
-static A_17: &'static [Among<Context>; 4] = &[
+static A_17: &[Among<Context>; 4] = &[
     Among("niz", -1, -1, None),
     Among("nuz", -1, -1, None),
     Among("nız", -1, -1, None),
     Among("nüz", -1, -1, None),
 ];
 
-static A_18: &'static [Among<Context>; 8] = &[
+static A_18: &[Among<Context>; 8] = &[
     Among("dir", -1, -1, None),
     Among("tir", -1, -1, None),
     Among("dur", -1, -1, None),
@@ -135,12 +137,12 @@ static A_18: &'static [Among<Context>; 8] = &[
     Among("tür", -1, -1, None),
 ];
 
-static A_19: &'static [Among<Context>; 2] = &[
+static A_19: &[Among<Context>; 2] = &[
     Among("casına", -1, -1, None),
     Among("cesine", -1, -1, None),
 ];
 
-static A_20: &'static [Among<Context>; 32] = &[
+static A_20: &[Among<Context>; 32] = &[
     Among("di", -1, -1, None),
     Among("ti", -1, -1, None),
     Among("dik", -1, -1, None),
@@ -175,7 +177,7 @@ static A_20: &'static [Among<Context>; 32] = &[
     Among("tü", -1, -1, None),
 ];
 
-static A_21: &'static [Among<Context>; 8] = &[
+static A_21: &[Among<Context>; 8] = &[
     Among("sa", -1, -1, None),
     Among("se", -1, -1, None),
     Among("sak", -1, -1, None),
@@ -186,37 +188,37 @@ static A_21: &'static [Among<Context>; 8] = &[
     Among("sen", -1, -1, None),
 ];
 
-static A_22: &'static [Among<Context>; 4] = &[
+static A_22: &[Among<Context>; 4] = &[
     Among("miş", -1, -1, None),
     Among("muş", -1, -1, None),
     Among("mış", -1, -1, None),
     Among("müş", -1, -1, None),
 ];
 
-static A_23: &'static [Among<Context>; 4] = &[
+static A_23: &[Among<Context>; 4] = &[
     Among("b", -1, 1, None),
     Among("c", -1, 2, None),
     Among("d", -1, 3, None),
     Among("ğ", -1, 4, None),
 ];
 
-static G_vowel: &'static [u8; 27] = &[17, 65, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 8, 0, 0, 0, 0, 0, 0, 1];
+static G_vowel: & [u8; 27] = &[17, 65, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 8, 0, 0, 0, 0, 0, 0, 1];
 
-static G_U: &'static [u8; 26] = &[1, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 1];
+static G_U: & [u8; 26] = &[1, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 1];
 
-static G_vowel1: &'static [u8; 27] = &[1, 64, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1];
+static G_vowel1: & [u8; 27] = &[1, 64, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1];
 
-static G_vowel2: &'static [u8; 19] = &[17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130];
+static G_vowel2: & [u8; 19] = &[17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130];
 
-static G_vowel3: &'static [u8; 27] = &[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1];
+static G_vowel3: & [u8; 27] = &[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1];
 
-static G_vowel4: &'static [u8; 1] = &[17];
+static G_vowel4: & [u8; 1] = &[17];
 
-static G_vowel5: &'static [u8; 1] = &[65];
+static G_vowel5: & [u8; 1] = &[65];
 
-static G_vowel6: &'static [u8; 1] = &[65];
+static G_vowel6: & [u8; 1] = &[65];
 
-fn r_check_vowel_harmony(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_check_vowel_harmony(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.limit - env.cursor;
     if !env.go_out_grouping_b(G_vowel, 97, 305) {
         return false;
@@ -305,7 +307,7 @@ fn r_check_vowel_harmony(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_mark_suffix_with_optional_n_consonant(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_suffix_with_optional_n_consonant(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     'lab0: loop {
         let v_1 = env.limit - env.cursor;
         'lab1: loop {
@@ -340,7 +342,7 @@ fn r_mark_suffix_with_optional_n_consonant(env: &mut SnowballEnv, context: &mut 
     return true
 }
 
-fn r_mark_suffix_with_optional_s_consonant(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_suffix_with_optional_s_consonant(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     'lab0: loop {
         let v_1 = env.limit - env.cursor;
         'lab1: loop {
@@ -375,7 +377,7 @@ fn r_mark_suffix_with_optional_s_consonant(env: &mut SnowballEnv, context: &mut 
     return true
 }
 
-fn r_mark_suffix_with_optional_y_consonant(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_suffix_with_optional_y_consonant(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     'lab0: loop {
         let v_1 = env.limit - env.cursor;
         'lab1: loop {
@@ -410,7 +412,7 @@ fn r_mark_suffix_with_optional_y_consonant(env: &mut SnowballEnv, context: &mut 
     return true
 }
 
-fn r_mark_suffix_with_optional_U_vowel(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_suffix_with_optional_U_vowel(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     'lab0: loop {
         let v_1 = env.limit - env.cursor;
         'lab1: loop {
@@ -445,8 +447,8 @@ fn r_mark_suffix_with_optional_U_vowel(env: &mut SnowballEnv, context: &mut Cont
     return true
 }
 
-fn r_mark_possessives(env: &mut SnowballEnv, context: &mut Context) -> bool {
-    if (env.cursor <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 3 as u8 || ((67133440 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+fn r_mark_possessives(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
+    if (env.cursor <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 3 || ((67133440  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0) {
         return false;
     }
 
@@ -456,7 +458,7 @@ fn r_mark_possessives(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_U_vowel(env, context);
 }
 
-fn r_mark_sU(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_sU(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
@@ -466,15 +468,15 @@ fn r_mark_sU(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_s_consonant(env, context);
 }
 
-fn r_mark_lArI(env: &mut SnowballEnv, context: &mut Context) -> bool {
-    if (env.cursor - 3 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 105 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 177 as u8)) {
+fn r_mark_lArI(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
+    if (env.cursor - 3 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 105 && env.current.as_bytes()[(env.cursor - 1) as usize] != 177)) {
         return false;
     }
 
     return env.find_among_b(A_1, context) != 0;
 }
 
-fn r_mark_yU(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_yU(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
@@ -484,18 +486,18 @@ fn r_mark_yU(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_y_consonant(env, context);
 }
 
-fn r_mark_nU(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_nU(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
     return env.find_among_b(A_2, context) != 0;
 }
 
-fn r_mark_nUn(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_nUn(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 110 as u8) {
+    if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 110) {
         return false;
     }
 
@@ -505,11 +507,11 @@ fn r_mark_nUn(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_n_consonant(env, context);
 }
 
-fn r_mark_yA(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_yA(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 97 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 101 as u8)) {
+    if (env.cursor <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 97 && env.current.as_bytes()[(env.cursor - 1) as usize] != 101)) {
         return false;
     }
 
@@ -517,66 +519,66 @@ fn r_mark_yA(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_y_consonant(env, context);
 }
 
-fn r_mark_nA(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_nA(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 97 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 101 as u8)) {
+    if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 97 && env.current.as_bytes()[(env.cursor - 1) as usize] != 101)) {
         return false;
     }
 
     return env.find_among_b(A_5, context) != 0;
 }
 
-fn r_mark_DA(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_DA(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 97 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 101 as u8)) {
+    if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 97 && env.current.as_bytes()[(env.cursor - 1) as usize] != 101)) {
         return false;
     }
 
     return env.find_among_b(A_6, context) != 0;
 }
 
-fn r_mark_ndA(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_ndA(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 2 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 97 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 101 as u8)) {
+    if (env.cursor - 2 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 97 && env.current.as_bytes()[(env.cursor - 1) as usize] != 101)) {
         return false;
     }
 
     return env.find_among_b(A_7, context) != 0;
 }
 
-fn r_mark_DAn(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_DAn(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 110 as u8) {
+    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 110) {
         return false;
     }
 
     return env.find_among_b(A_8, context) != 0;
 }
 
-fn r_mark_ndAn(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_ndAn(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 3 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 110 as u8) {
+    if (env.cursor - 3 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 110) {
         return false;
     }
 
     return env.find_among_b(A_9, context) != 0;
 }
 
-fn r_mark_ylA(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_ylA(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 97 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 101 as u8)) {
+    if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 97 && env.current.as_bytes()[(env.cursor - 1) as usize] != 101)) {
         return false;
     }
 
@@ -586,11 +588,11 @@ fn r_mark_ylA(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_y_consonant(env, context);
 }
 
-fn r_mark_ncA(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_ncA(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 97 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 101 as u8)) {
+    if (env.cursor - 1 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 97 && env.current.as_bytes()[(env.cursor - 1) as usize] != 101)) {
         return false;
     }
 
@@ -600,11 +602,11 @@ fn r_mark_ncA(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_n_consonant(env, context);
 }
 
-fn r_mark_yUm(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_yUm(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 109 as u8) {
+    if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 109) {
         return false;
     }
 
@@ -614,22 +616,22 @@ fn r_mark_yUm(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_y_consonant(env, context);
 }
 
-fn r_mark_sUn(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_sUn(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 110 as u8) {
+    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 110) {
         return false;
     }
 
     return env.find_among_b(A_13, context) != 0;
 }
 
-fn r_mark_yUz(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_yUz(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 122 as u8) {
+    if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 122) {
         return false;
     }
 
@@ -639,56 +641,56 @@ fn r_mark_yUz(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_y_consonant(env, context);
 }
 
-fn r_mark_sUnUz(env: &mut SnowballEnv, context: &mut Context) -> bool {
-    if (env.cursor - 4 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 122 as u8) {
+fn r_mark_sUnUz(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
+    if (env.cursor - 4 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 122) {
         return false;
     }
 
     return env.find_among_b(A_15, context) != 0;
 }
 
-fn r_mark_lAr(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_lAr(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 114 as u8) {
+    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 114) {
         return false;
     }
 
     return env.find_among_b(A_16, context) != 0;
 }
 
-fn r_mark_nUz(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_nUz(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 122 as u8) {
+    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 122) {
         return false;
     }
 
     return env.find_among_b(A_17, context) != 0;
 }
 
-fn r_mark_DUr(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_DUr(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 114 as u8) {
+    if (env.cursor - 2 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 114) {
         return false;
     }
 
     return env.find_among_b(A_18, context) != 0;
 }
 
-fn r_mark_cAsInA(env: &mut SnowballEnv, context: &mut Context) -> bool {
-    if (env.cursor - 5 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 97 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 101 as u8)) {
+fn r_mark_cAsInA(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
+    if (env.cursor - 5 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 97 && env.current.as_bytes()[(env.cursor - 1) as usize] != 101)) {
         return false;
     }
 
     return env.find_among_b(A_19, context) != 0;
 }
 
-fn r_mark_yDU(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_yDU(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
@@ -698,8 +700,8 @@ fn r_mark_yDU(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_y_consonant(env, context);
 }
 
-fn r_mark_ysA(env: &mut SnowballEnv, context: &mut Context) -> bool {
-    if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 3 as u8 || ((26658 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1) == 0) {
+fn r_mark_ysA(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
+    if (env.cursor - 1 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 3 || ((26658  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0) {
         return false;
     }
 
@@ -709,11 +711,11 @@ fn r_mark_ysA(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_y_consonant(env, context);
 }
 
-fn r_mark_ymUs_(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_ymUs_(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !r_check_vowel_harmony(env, context) {
         return false;
     }
-    if (env.cursor - 3 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 159 as u8) {
+    if (env.cursor - 3 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 159) {
         return false;
     }
 
@@ -723,14 +725,14 @@ fn r_mark_ymUs_(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return r_mark_suffix_with_optional_y_consonant(env, context);
 }
 
-fn r_mark_yken(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_yken(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !env.eq_s_b(&"ken") {
         return false;
     }
     return r_mark_suffix_with_optional_y_consonant(env, context);
 }
 
-fn r_stem_nominal_verb_suffixes(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_stem_nominal_verb_suffixes(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     context.b_continue_stemming_noun_suffixes = true;
     'lab0: loop {
@@ -984,7 +986,7 @@ fn r_stem_nominal_verb_suffixes(env: &mut SnowballEnv, context: &mut Context) ->
     return true
 }
 
-fn r_stem_suffix_chain_before_ki(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_stem_suffix_chain_before_ki(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if !env.eq_s_b(&"ki") {
         return false;
@@ -1162,7 +1164,7 @@ fn r_stem_suffix_chain_before_ki(env: &mut SnowballEnv, context: &mut Context) -
     return true
 }
 
-fn r_stem_noun_suffixes(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_stem_noun_suffixes(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     'lab0: loop {
         let v_1 = env.limit - env.cursor;
         'lab1: loop {
@@ -1633,7 +1635,7 @@ fn r_stem_noun_suffixes(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_post_process_last_consonants(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_post_process_last_consonants(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_23, context);
@@ -1659,7 +1661,7 @@ fn r_post_process_last_consonants(env: &mut SnowballEnv, context: &mut Context) 
     return true
 }
 
-fn r_append_U_to_stems_ending_with_d_or_g(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_append_U_to_stems_ending_with_d_or_g(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     env.bra = env.cursor;
     'lab0: loop {
@@ -1748,7 +1750,7 @@ fn r_append_U_to_stems_ending_with_d_or_g(env: &mut SnowballEnv, context: &mut C
     return true
 }
 
-fn r_is_reserved_word(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_is_reserved_word(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     if !env.eq_s_b(&"ad") {
         return false;
     }
@@ -1763,7 +1765,7 @@ fn r_is_reserved_word(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return env.cursor <= env.limit_backward
 }
 
-fn r_remove_proper_noun_suffix(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_proper_noun_suffix(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.cursor;
     'lab0: loop {
         env.bra = env.cursor;
@@ -1820,7 +1822,7 @@ fn r_remove_proper_noun_suffix(env: &mut SnowballEnv, context: &mut Context) -> 
     return true
 }
 
-fn r_more_than_one_syllable_word(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_more_than_one_syllable_word(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.cursor;
     for _ in 0..2 {
         if !env.go_out_grouping(G_vowel, 97, 305) {
@@ -1832,7 +1834,7 @@ fn r_more_than_one_syllable_word(env: &mut SnowballEnv, context: &mut Context) -
     return true
 }
 
-fn r_postlude(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_postlude(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.limit_backward = env.cursor;
     env.cursor = env.limit;
     let v_1 = env.limit - env.cursor;
@@ -1853,7 +1855,7 @@ fn r_postlude(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context {
         b_continue_stemming_noun_suffixes: false,
     };

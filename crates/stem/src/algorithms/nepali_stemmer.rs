@@ -1,16 +1,18 @@
 //! Generated from nepali.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::{Among, SnowballEnv};
 
 #[derive(Clone)]
 struct Context {}
 
-static A_0: &'static [Among<Context>; 17] = &[
+static A_0: &[Among<Context>; 17] = &[
     Among("\u{915}\u{940}", -1, 2, None),
     Among("\u{932}\u{93E}\u{907}", -1, 1, None),
     Among("\u{932}\u{947}", -1, 1, None),
@@ -30,10 +32,10 @@ static A_0: &'static [Among<Context>; 17] = &[
     Among("\u{92A}\u{91B}\u{93F}", -1, 1, None),
 ];
 
-static A_1: &'static [Among<Context>; 3] =
+static A_1: &[Among<Context>; 3] =
     &[Among("\u{901}", -1, 1, None), Among("\u{902}", -1, 1, None), Among("\u{948}", -1, 2, None)];
 
-static A_2: &'static [Among<Context>; 91] = &[
+static A_2: &[Among<Context>; 91] = &[
     Among("\u{947}\u{915}\u{940}", -1, 1, None),
     Among("\u{90F}\u{915}\u{940}", -1, 1, None),
     Among("\u{907}\u{90F}\u{915}\u{940}", 1, 1, None),
@@ -127,7 +129,7 @@ static A_2: &'static [Among<Context>; 91] = &[
     Among("\u{92E}\u{93E}\u{925}\u{93F}", -1, 1, None),
 ];
 
-fn r_remove_category_1(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_category_1(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_0, context);
@@ -160,12 +162,12 @@ fn r_remove_category_1(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_remove_category_2(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_category_2(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     if (env.cursor - 2 <= env.limit_backward
-        || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 4 as u8
-        || ((262 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f)) & 1)
+        || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 4
+        || ((262  >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1)
             == 0)
     {
         return false;
@@ -215,7 +217,7 @@ fn r_remove_category_2(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_remove_category_3(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_category_3(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_2, context) == 0 {
         return false;
@@ -225,7 +227,7 @@ fn r_remove_category_3(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context {};
     env.limit_backward = env.cursor;
     env.cursor = env.limit;

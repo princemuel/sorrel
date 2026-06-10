@@ -69,7 +69,7 @@ pub enum Algorithm {
 
 impl Algorithm {
     /// Get the string name of the algorithm
-    pub fn as_str(&self) -> &'static str {
+    pub fn as_str(&self) -> &str {
         match self {
             Algorithm::Arabic => "arabic",
             Algorithm::Armenian => "armenian",
@@ -175,7 +175,7 @@ impl Stemmer {
 ///
 /// The stemmed word. If the word is unchanged, returns a borrowed reference.
 /// If the word is modified, returns an owned String.
-pub fn stem(algorithm: Algorithm, word: &str) -> Cow<str> {
+pub fn stem(algorithm: Algorithm, word: &str) -> Cow<'_, str> {
     use algorithms::*;
 
     let mut env = SnowballEnv::create(word);

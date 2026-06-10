@@ -1,10 +1,12 @@
 //! Generated from persian.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::SnowballEnv;
 use crate::snowball::Among;
 
@@ -15,7 +17,7 @@ struct Context {
     b_saw_present_prefix: bool,
 }
 
-static A_0: &'static [Among<Context>; 11] = &[
+static A_0: &[Among<Context>; 11] = &[
     Among("", -1, 7, None),
     Among(" ", 0, 6, None),
     Among("\u{623}", 0, 4, None),
@@ -29,19 +31,19 @@ static A_0: &'static [Among<Context>; 11] = &[
     Among("\u{200D}", 0, 6, None),
 ];
 
-static A_1: &'static [Among<Context>; 2] = &[
+static A_1: &[Among<Context>; 2] = &[
     Among("\u{645}\u{6CC}\u{200C}", -1, 2, None),
     Among("\u{646}\u{645}\u{6CC}\u{200C}", -1, 1, None),
 ];
 
-static A_2: &'static [Among<Context>; 4] = &[
+static A_2: &[Among<Context>; 4] = &[
     Among("\u{648}\u{627}\u{646}", -1, -1, None),
     Among("\u{633}\u{62A}\u{627}\u{646}", -1, -1, None),
     Among("\u{631}\u{627}\u{646}", -1, -1, None),
     Among("\u{633}\u{627}\u{646}", -1, -1, None),
 ];
 
-static A_3: &'static [Among<Context>; 33] = &[
+static A_3: &[Among<Context>; 33] = &[
     Among("\u{6AF}\u{6CC}\u{644}\u{627}\u{646}", -1, 1, None),
     Among("\u{622}\u{644}\u{645}\u{627}\u{646}", -1, 1, None),
     Among("\u{645}\u{633}\u{644}\u{645}\u{627}\u{646}", -1, 1, None),
@@ -77,12 +79,12 @@ static A_3: &'static [Among<Context>; 33] = &[
     Among("\u{633}\u{644}\u{637}\u{627}\u{646}", -1, 1, None),
 ];
 
-static A_4: &'static [Among<Context>; 2] = &[
+static A_4: &[Among<Context>; 2] = &[
     Among("\u{627}\u{633}\u{627}\u{62A}\u{6CC}\u{62F}", -1, 2, None),
     Among("\u{627}\u{62E}\u{628}\u{627}\u{631}", -1, 1, None),
 ];
 
-static A_5: &'static [Among<Context>; 22] = &[
+static A_5: &[Among<Context>; 22] = &[
     Among("\u{627}\u{645}", -1, 1, None),
     Among("\u{6CC}\u{646}", -1, 1, None),
     Among("\u{62A}\u{631}\u{6CC}\u{646}", 1, 1, None),
@@ -107,7 +109,7 @@ static A_5: &'static [Among<Context>; 22] = &[
     Among("\u{627}\u{634}", -1, 1, None),
 ];
 
-static A_6: &'static [Among<Context>; 8] = &[
+static A_6: &[Among<Context>; 8] = &[
     Among("\u{6CC}\u{645}", -1, 1, None),
     Among("\u{627}\u{6CC}\u{645}", 0, 1, None),
     Among("\u{627}\u{6CC}", -1, 1, None),
@@ -118,7 +120,7 @@ static A_6: &'static [Among<Context>; 8] = &[
     Among("\u{627}\u{633}", -1, 1, None),
 ];
 
-static A_7: &'static [Among<Context>; 15] = &[
+static A_7: &[Among<Context>; 15] = &[
     Among("\u{645}", -1, 1, None),
     Among("\u{6CC}\u{645}", 0, 1, None),
     Among("\u{631}\u{641}\u{62A}\u{6CC}\u{645}", 1, 2, None),
@@ -136,7 +138,7 @@ static A_7: &'static [Among<Context>; 15] = &[
     Among("\u{631}\u{641}\u{62A}\u{6CC}\u{62F}", 13, 2, None),
 ];
 
-fn r_Normalize_Characters(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Normalize_Characters(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     'replab0: loop{
         let v_1 = env.cursor;
@@ -179,10 +181,10 @@ fn r_Normalize_Characters(env: &mut SnowballEnv, context: &mut Context) -> bool 
     return true
 }
 
-fn r_Prefixes(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Prefixes(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.bra = env.cursor;
-    if (env.cursor + 6 >= env.limit || (env.current.as_bytes()[(env.cursor + 6) as usize] as u8 != 140 as u8 && env.current.as_bytes()[(env.cursor + 6) as usize] as u8 != 226 as u8)) {
+    if (env.cursor + 6 >= env.limit || (env.current.as_bytes()[(env.cursor + 6) as usize] != 140 && env.current.as_bytes()[(env.cursor + 6) as usize] != 226)) {
         return false;
     }
 
@@ -210,7 +212,7 @@ fn r_Prefixes(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_Delete_ZWNJ(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Delete_ZWNJ(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     'replab0: loop{
         let v_1 = env.cursor;
         'lab1: for _ in 0..1 {
@@ -240,11 +242,11 @@ fn r_Delete_ZWNJ(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_R1(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_R1(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     return context.i_p1 <= env.cursor
 }
 
-fn r_Protect_Lexical_AN(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Protect_Lexical_AN(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let v_1 = env.limit - env.cursor;
     'lab0: loop {
         if !r_AN_Exception(env, context) {
@@ -255,7 +257,7 @@ fn r_Protect_Lexical_AN(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.cursor = env.limit - v_1;
     let v_2 = env.limit - env.cursor;
     'lab1: loop {
-        if (env.cursor - 5 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 134 as u8) {
+        if (env.cursor - 5 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 134) {
             break 'lab1;
         }
 
@@ -268,8 +270,8 @@ fn r_Protect_Lexical_AN(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_AN_Exception(env: &mut SnowballEnv, context: &mut Context) -> bool {
-    if (env.cursor - 7 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 134 as u8) {
+fn r_AN_Exception(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
+    if (env.cursor - 7 <= env.limit_backward || env.current.as_bytes()[(env.cursor - 1) as usize] != 134) {
         return false;
     }
 
@@ -282,10 +284,10 @@ fn r_AN_Exception(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_Irregular_Noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Irregular_Noun(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
-    if (env.cursor - 9 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 175 as u8 && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 177 as u8)) {
+    if (env.cursor - 9 <= env.limit_backward || (env.current.as_bytes()[(env.cursor - 1) as usize] != 175 && env.current.as_bytes()[(env.cursor - 1) as usize] != 177)) {
         return false;
     }
 
@@ -306,7 +308,7 @@ fn r_Irregular_Noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-fn r_Stem_Noun_or_Adjective(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Stem_Noun_or_Adjective(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     'lab0: loop {
         let v_1 = env.limit - env.cursor;
@@ -348,7 +350,7 @@ fn r_Stem_Noun_or_Adjective(env: &mut SnowballEnv, context: &mut Context) -> boo
     return true
 }
 
-fn r_Stem_Verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Stem_Verb(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     'lab0: loop {
         let v_1 = env.limit - env.cursor;
@@ -412,7 +414,7 @@ fn r_Stem_Verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context {
         i_p1: 0,
         b_remove_verb_person_endings: false,

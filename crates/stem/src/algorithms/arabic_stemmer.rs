@@ -1,10 +1,12 @@
 //! Generated from arabic.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::{Among, SnowballEnv};
 
 #[derive(Clone)]
@@ -14,7 +16,7 @@ struct Context {
     b_is_noun: bool,
 }
 
-static A_0: &'static [Among<Context>; 144] = &[
+static A_0: &[Among<Context>; 144] = &[
     Among("\u{640}", -1, 1, None),
     Among("\u{64B}", -1, 1, None),
     Among("\u{64C}", -1, 1, None),
@@ -161,7 +163,7 @@ static A_0: &'static [Among<Context>; 144] = &[
     Among("\u{FEFC}", -1, 48, None),
 ];
 
-static A_1: &'static [Among<Context>; 5] = &[
+static A_1: &[Among<Context>; 5] = &[
     Among("\u{622}", -1, 1, None),
     Among("\u{623}", -1, 1, None),
     Among("\u{624}", -1, 1, None),
@@ -169,7 +171,7 @@ static A_1: &'static [Among<Context>; 5] = &[
     Among("\u{626}", -1, 1, None),
 ];
 
-static A_2: &'static [Among<Context>; 5] = &[
+static A_2: &[Among<Context>; 5] = &[
     Among("\u{622}", -1, 1, None),
     Among("\u{623}", -1, 1, None),
     Among("\u{624}", -1, 2, None),
@@ -177,14 +179,14 @@ static A_2: &'static [Among<Context>; 5] = &[
     Among("\u{626}", -1, 3, None),
 ];
 
-static A_3: &'static [Among<Context>; 4] = &[
+static A_3: &[Among<Context>; 4] = &[
     Among("\u{627}\u{644}", -1, 2, None),
     Among("\u{628}\u{627}\u{644}", -1, 1, None),
     Among("\u{643}\u{627}\u{644}", -1, 1, None),
     Among("\u{644}\u{644}", -1, 2, None),
 ];
 
-static A_4: &'static [Among<Context>; 5] = &[
+static A_4: &[Among<Context>; 5] = &[
     Among("\u{623}\u{622}", -1, 2, None),
     Among("\u{623}\u{623}", -1, 1, None),
     Among("\u{623}\u{624}", -1, 1, None),
@@ -192,37 +194,36 @@ static A_4: &'static [Among<Context>; 5] = &[
     Among("\u{623}\u{627}", -1, 3, None),
 ];
 
-static A_5: &'static [Among<Context>; 2] =
-    &[Among("\u{641}", -1, 1, None), Among("\u{648}", -1, 1, None)];
+static A_5: &[Among<Context>; 2] = &[Among("\u{641}", -1, 1, None), Among("\u{648}", -1, 1, None)];
 
-static A_6: &'static [Among<Context>; 4] = &[
+static A_6: &[Among<Context>; 4] = &[
     Among("\u{627}\u{644}", -1, 2, None),
     Among("\u{628}\u{627}\u{644}", -1, 1, None),
     Among("\u{643}\u{627}\u{644}", -1, 1, None),
     Among("\u{644}\u{644}", -1, 2, None),
 ];
 
-static A_7: &'static [Among<Context>; 4] = &[
+static A_7: &[Among<Context>; 4] = &[
     Among("\u{628}", -1, 1, None),
     Among("\u{628}\u{627}", 0, -1, None),
     Among("\u{628}\u{628}", 0, 2, None),
     Among("\u{643}\u{643}", -1, 3, None),
 ];
 
-static A_8: &'static [Among<Context>; 4] = &[
+static A_8: &[Among<Context>; 4] = &[
     Among("\u{633}\u{623}", -1, 4, None),
     Among("\u{633}\u{62A}", -1, 2, None),
     Among("\u{633}\u{646}", -1, 3, None),
     Among("\u{633}\u{64A}", -1, 1, None),
 ];
 
-static A_9: &'static [Among<Context>; 3] = &[
+static A_9: &[Among<Context>; 3] = &[
     Among("\u{62A}\u{633}\u{62A}", -1, 1, None),
     Among("\u{646}\u{633}\u{62A}", -1, 1, None),
     Among("\u{64A}\u{633}\u{62A}", -1, 1, None),
 ];
 
-static A_10: &'static [Among<Context>; 10] = &[
+static A_10: &[Among<Context>; 10] = &[
     Among("\u{643}", -1, 1, None),
     Among("\u{643}\u{645}", -1, 2, None),
     Among("\u{647}\u{645}", -1, 2, None),
@@ -235,10 +236,10 @@ static A_10: &'static [Among<Context>; 10] = &[
     Among("\u{647}\u{627}", -1, 2, None),
 ];
 
-static A_11: &'static [Among<Context>; 3] =
+static A_11: &[Among<Context>; 3] =
     &[Among("\u{648}", -1, 1, None), Among("\u{64A}", -1, 1, None), Among("\u{627}", -1, 1, None)];
 
-static A_12: &'static [Among<Context>; 12] = &[
+static A_12: &[Among<Context>; 12] = &[
     Among("\u{643}", -1, 1, None),
     Among("\u{643}\u{645}", -1, 2, None),
     Among("\u{647}\u{645}", -1, 2, None),
@@ -253,7 +254,7 @@ static A_12: &'static [Among<Context>; 12] = &[
     Among("\u{647}\u{627}", -1, 2, None),
 ];
 
-static A_13: &'static [Among<Context>; 11] = &[
+static A_13: &[Among<Context>; 11] = &[
     Among("\u{646}", -1, 1, None),
     Among("\u{648}\u{646}", 0, 3, None),
     Among("\u{64A}\u{646}", 0, 3, None),
@@ -267,13 +268,13 @@ static A_13: &'static [Among<Context>; 11] = &[
     Among("\u{62A}", -1, 1, None),
 ];
 
-static A_14: &'static [Among<Context>; 2] =
+static A_14: &[Among<Context>; 2] =
     &[Among("\u{62A}\u{645}", -1, 1, None), Among("\u{648}\u{627}", -1, 1, None)];
 
-static A_15: &'static [Among<Context>; 2] =
+static A_15: &[Among<Context>; 2] =
     &[Among("\u{648}", -1, 1, None), Among("\u{62A}\u{645}\u{648}", 0, 2, None)];
 
-fn r_Normalize_pre(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Normalize_pre(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     let v_1 = env.cursor;
     'lab0: loop {
@@ -465,7 +466,7 @@ fn r_Normalize_pre(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Normalize_post(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Normalize_post(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     let v_1 = env.cursor;
     'lab0: loop {
@@ -473,10 +474,8 @@ fn r_Normalize_post(env: &mut SnowballEnv, context: &mut Context) -> bool {
         env.cursor = env.limit;
         env.ket = env.cursor;
         if (env.cursor - 1 <= env.limit_backward
-            || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 >> 5 != 5 as u8
-            || ((124 as i32 >> (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 & 0x1f))
-                & 1)
-                == 0)
+            || env.current.as_bytes()[(env.cursor - 1) as usize] >> 5 != 5
+            || ((124 >> (env.current.as_bytes()[(env.cursor - 1) as usize] & 0x1f)) & 1) == 0)
         {
             break 'lab0;
         }
@@ -500,11 +499,9 @@ fn r_Normalize_post(env: &mut SnowballEnv, context: &mut Context) -> bool {
                     'lab5: loop {
                         env.bra = env.cursor;
                         if (env.cursor + 1 >= env.limit
-                            || env.current.as_bytes()[(env.cursor + 1) as usize] as u8 >> 5
-                                != 5 as u8
-                            || ((124 as i32
-                                >> (env.current.as_bytes()[(env.cursor + 1) as usize] as u8
-                                    & 0x1f))
+                            || env.current.as_bytes()[(env.cursor + 1) as usize] >> 5 != 5
+                            || ((124
+                                >> (env.current.as_bytes()[(env.cursor + 1) as usize] & 0x1f))
                                 & 1)
                                 == 0)
                         {
@@ -548,12 +545,12 @@ fn r_Normalize_post(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Checks1(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Checks1(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.bra = env.cursor;
     if (env.cursor + 3 >= env.limit
-        || (env.current.as_bytes()[(env.cursor + 3) as usize] as u8 != 132 as u8
-            && env.current.as_bytes()[(env.cursor + 3) as usize] as u8 != 167 as u8))
+        || (env.current.as_bytes()[(env.cursor + 3) as usize] != 132
+            && env.current.as_bytes()[(env.cursor + 3) as usize] != 167))
     {
         return false;
     }
@@ -565,7 +562,7 @@ fn r_Checks1(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.ket = env.cursor;
     match among_var {
         1 => {
-            if (env.current.chars().count() as i32) <= 4 {
+            if (env.current.chars().count()) <= 4 {
                 return false;
             }
             context.b_is_noun = true;
@@ -573,7 +570,7 @@ fn r_Checks1(env: &mut SnowballEnv, context: &mut Context) -> bool {
             context.b_is_defined = true;
         }
         2 => {
-            if (env.current.chars().count() as i32) <= 3 {
+            if (env.current.chars().count()) <= 3 {
                 return false;
             }
             context.b_is_noun = true;
@@ -585,13 +582,12 @@ fn r_Checks1(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Prefix_Step1(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Prefix_Step1(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.bra = env.cursor;
     if (env.cursor + 3 >= env.limit
-        || env.current.as_bytes()[(env.cursor + 3) as usize] as u8 >> 5 != 5 as u8
-        || ((188 as i32 >> (env.current.as_bytes()[(env.cursor + 3) as usize] as u8 & 0x1f)) & 1)
-            == 0)
+        || env.current.as_bytes()[(env.cursor + 3) as usize] >> 5 != 5
+        || ((188 >> (env.current.as_bytes()[(env.cursor + 3) as usize] & 0x1f)) & 1) == 0)
     {
         return false;
     }
@@ -603,25 +599,25 @@ fn r_Prefix_Step1(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.ket = env.cursor;
     match among_var {
         1 => {
-            if (env.current.chars().count() as i32) <= 3 {
+            if (env.current.chars().count()) <= 3 {
                 return false;
             }
             env.slice_from("\u{623}");
         }
         2 => {
-            if (env.current.chars().count() as i32) <= 3 {
+            if (env.current.chars().count()) <= 3 {
                 return false;
             }
             env.slice_from("\u{622}");
         }
         3 => {
-            if (env.current.chars().count() as i32) <= 3 {
+            if (env.current.chars().count()) <= 3 {
                 return false;
             }
             env.slice_from("\u{627}");
         }
         4 => {
-            if (env.current.chars().count() as i32) <= 3 {
+            if (env.current.chars().count()) <= 3 {
                 return false;
             }
             env.slice_from("\u{625}");
@@ -631,11 +627,11 @@ fn r_Prefix_Step1(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Prefix_Step2(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Prefix_Step2(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.bra = env.cursor;
     if (env.cursor + 1 >= env.limit
-        || (env.current.as_bytes()[(env.cursor + 1) as usize] as u8 != 129 as u8
-            && env.current.as_bytes()[(env.cursor + 1) as usize] as u8 != 136 as u8))
+        || (env.current.as_bytes()[(env.cursor + 1) as usize] != 129
+            && env.current.as_bytes()[(env.cursor + 1) as usize] != 136))
     {
         return false;
     }
@@ -644,7 +640,7 @@ fn r_Prefix_Step2(env: &mut SnowballEnv, context: &mut Context) -> bool {
         return false;
     }
     env.ket = env.cursor;
-    if (env.current.chars().count() as i32) <= 3 {
+    if (env.current.chars().count()) <= 3 {
         return false;
     }
     'lab0: loop {
@@ -657,12 +653,12 @@ fn r_Prefix_Step2(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Prefix_Step3a_Noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Prefix_Step3a_Noun(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.bra = env.cursor;
     if (env.cursor + 3 >= env.limit
-        || (env.current.as_bytes()[(env.cursor + 3) as usize] as u8 != 132 as u8
-            && env.current.as_bytes()[(env.cursor + 3) as usize] as u8 != 167 as u8))
+        || (env.current.as_bytes()[(env.cursor + 3) as usize] != 132
+            && env.current.as_bytes()[(env.cursor + 3) as usize] != 167))
     {
         return false;
     }
@@ -674,13 +670,13 @@ fn r_Prefix_Step3a_Noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.ket = env.cursor;
     match among_var {
         1 => {
-            if (env.current.chars().count() as i32) <= 5 {
+            if (env.current.chars().count()) <= 5 {
                 return false;
             }
             env.slice_del();
         }
         2 => {
-            if (env.current.chars().count() as i32) <= 4 {
+            if (env.current.chars().count()) <= 4 {
                 return false;
             }
             env.slice_del();
@@ -690,12 +686,12 @@ fn r_Prefix_Step3a_Noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Prefix_Step3b_Noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Prefix_Step3b_Noun(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.bra = env.cursor;
     if (env.cursor + 1 >= env.limit
-        || (env.current.as_bytes()[(env.cursor + 1) as usize] as u8 != 168 as u8
-            && env.current.as_bytes()[(env.cursor + 1) as usize] as u8 != 131 as u8))
+        || (env.current.as_bytes()[(env.cursor + 1) as usize] != 168
+            && env.current.as_bytes()[(env.cursor + 1) as usize] != 131))
     {
         return false;
     }
@@ -707,19 +703,19 @@ fn r_Prefix_Step3b_Noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.ket = env.cursor;
     match among_var {
         1 => {
-            if (env.current.chars().count() as i32) <= 3 {
+            if (env.current.chars().count()) <= 3 {
                 return false;
             }
             env.slice_del();
         }
         2 => {
-            if (env.current.chars().count() as i32) <= 3 {
+            if (env.current.chars().count()) <= 3 {
                 return false;
             }
             env.slice_from("\u{628}");
         }
         3 => {
-            if (env.current.chars().count() as i32) <= 3 {
+            if (env.current.chars().count()) <= 3 {
                 return false;
             }
             env.slice_from("\u{643}");
@@ -729,7 +725,7 @@ fn r_Prefix_Step3b_Noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Prefix_Step3_Verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Prefix_Step3_Verb(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.bra = env.cursor;
     among_var = env.find_among(A_8, context);
@@ -739,25 +735,25 @@ fn r_Prefix_Step3_Verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.ket = env.cursor;
     match among_var {
         1 => {
-            if (env.current.chars().count() as i32) <= 4 {
+            if (env.current.chars().count()) <= 4 {
                 return false;
             }
             env.slice_from("\u{64A}");
         }
         2 => {
-            if (env.current.chars().count() as i32) <= 4 {
+            if (env.current.chars().count()) <= 4 {
                 return false;
             }
             env.slice_from("\u{62A}");
         }
         3 => {
-            if (env.current.chars().count() as i32) <= 4 {
+            if (env.current.chars().count()) <= 4 {
                 return false;
             }
             env.slice_from("\u{646}");
         }
         4 => {
-            if (env.current.chars().count() as i32) <= 4 {
+            if (env.current.chars().count()) <= 4 {
                 return false;
             }
             env.slice_from("\u{623}");
@@ -767,11 +763,9 @@ fn r_Prefix_Step3_Verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Prefix_Step4_Verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Prefix_Step4_Verb(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.bra = env.cursor;
-    if (env.cursor + 5 >= env.limit
-        || env.current.as_bytes()[(env.cursor + 5) as usize] as u8 != 170 as u8)
-    {
+    if (env.cursor + 5 >= env.limit || env.current.as_bytes()[(env.cursor + 5) as usize] != 170) {
         return false;
     }
 
@@ -779,7 +773,7 @@ fn r_Prefix_Step4_Verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
         return false;
     }
     env.ket = env.cursor;
-    if (env.current.chars().count() as i32) <= 4 {
+    if (env.current.chars().count()) <= 4 {
         return false;
     }
     context.b_is_verb = true;
@@ -788,7 +782,7 @@ fn r_Prefix_Step4_Verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Suffix_Noun_Step1a(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Noun_Step1a(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_10, context);
@@ -798,19 +792,19 @@ fn r_Suffix_Noun_Step1a(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.bra = env.cursor;
     match among_var {
         1 => {
-            if (env.current.chars().count() as i32) < 4 {
+            if (env.current.chars().count()) < 4 {
                 return false;
             }
             env.slice_del();
         }
         2 => {
-            if (env.current.chars().count() as i32) < 5 {
+            if (env.current.chars().count()) < 5 {
                 return false;
             }
             env.slice_del();
         }
         3 => {
-            if (env.current.chars().count() as i32) < 6 {
+            if (env.current.chars().count()) < 6 {
                 return false;
             }
             env.slice_del();
@@ -820,85 +814,85 @@ fn r_Suffix_Noun_Step1a(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Suffix_Noun_Step1b(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Noun_Step1b(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if !env.eq_s_b(&"\u{646}") {
         return false;
     }
     env.bra = env.cursor;
-    if (env.current.chars().count() as i32) <= 5 {
+    if (env.current.chars().count()) <= 5 {
         return false;
     }
     env.slice_del();
     return true;
 }
 
-fn r_Suffix_Noun_Step2a(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Noun_Step2a(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_11, context) == 0 {
         return false;
     }
     env.bra = env.cursor;
-    if (env.current.chars().count() as i32) <= 4 {
+    if (env.current.chars().count()) <= 4 {
         return false;
     }
     env.slice_del();
     return true;
 }
 
-fn r_Suffix_Noun_Step2b(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Noun_Step2b(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if !env.eq_s_b(&"\u{627}\u{62A}") {
         return false;
     }
     env.bra = env.cursor;
-    if (env.current.chars().count() as i32) < 5 {
+    if (env.current.chars().count()) < 5 {
         return false;
     }
     env.slice_del();
     return true;
 }
 
-fn r_Suffix_Noun_Step2c1(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Noun_Step2c1(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if !env.eq_s_b(&"\u{62A}") {
         return false;
     }
     env.bra = env.cursor;
-    if (env.current.chars().count() as i32) < 4 {
+    if (env.current.chars().count()) < 4 {
         return false;
     }
     env.slice_del();
     return true;
 }
 
-fn r_Suffix_Noun_Step2c2(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Noun_Step2c2(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if !env.eq_s_b(&"\u{629}") {
         return false;
     }
     env.bra = env.cursor;
-    if (env.current.chars().count() as i32) < 4 {
+    if (env.current.chars().count()) < 4 {
         return false;
     }
     env.slice_del();
     return true;
 }
 
-fn r_Suffix_Noun_Step3(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Noun_Step3(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if !env.eq_s_b(&"\u{64A}") {
         return false;
     }
     env.bra = env.cursor;
-    if (env.current.chars().count() as i32) < 3 {
+    if (env.current.chars().count()) < 3 {
         return false;
     }
     env.slice_del();
     return true;
 }
 
-fn r_Suffix_Verb_Step1(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Verb_Step1(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_12, context);
@@ -908,19 +902,19 @@ fn r_Suffix_Verb_Step1(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.bra = env.cursor;
     match among_var {
         1 => {
-            if (env.current.chars().count() as i32) < 4 {
+            if (env.current.chars().count()) < 4 {
                 return false;
             }
             env.slice_del();
         }
         2 => {
-            if (env.current.chars().count() as i32) < 5 {
+            if (env.current.chars().count()) < 5 {
                 return false;
             }
             env.slice_del();
         }
         3 => {
-            if (env.current.chars().count() as i32) < 6 {
+            if (env.current.chars().count()) < 6 {
                 return false;
             }
             env.slice_del();
@@ -930,7 +924,7 @@ fn r_Suffix_Verb_Step1(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Suffix_Verb_Step2a(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Verb_Step2a(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_13, context);
@@ -940,25 +934,25 @@ fn r_Suffix_Verb_Step2a(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.bra = env.cursor;
     match among_var {
         1 => {
-            if (env.current.chars().count() as i32) < 4 {
+            if (env.current.chars().count()) < 4 {
                 return false;
             }
             env.slice_del();
         }
         2 => {
-            if (env.current.chars().count() as i32) < 5 {
+            if (env.current.chars().count()) < 5 {
                 return false;
             }
             env.slice_del();
         }
         3 => {
-            if (env.current.chars().count() as i32) <= 5 {
+            if (env.current.chars().count()) <= 5 {
                 return false;
             }
             env.slice_del();
         }
         4 => {
-            if (env.current.chars().count() as i32) < 6 {
+            if (env.current.chars().count()) < 6 {
                 return false;
             }
             env.slice_del();
@@ -968,11 +962,11 @@ fn r_Suffix_Verb_Step2a(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Suffix_Verb_Step2b(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Verb_Step2b(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if (env.cursor - 3 <= env.limit_backward
-        || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 133 as u8
-            && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 167 as u8))
+        || (env.current.as_bytes()[(env.cursor - 1) as usize] != 133
+            && env.current.as_bytes()[(env.cursor - 1) as usize] != 167))
     {
         return false;
     }
@@ -981,18 +975,18 @@ fn r_Suffix_Verb_Step2b(env: &mut SnowballEnv, context: &mut Context) -> bool {
         return false;
     }
     env.bra = env.cursor;
-    if (env.current.chars().count() as i32) < 5 {
+    if (env.current.chars().count()) < 5 {
         return false;
     }
     env.slice_del();
     return true;
 }
 
-fn r_Suffix_Verb_Step2c(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_Verb_Step2c(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     if (env.cursor - 1 <= env.limit_backward
-        || env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 136 as u8)
+        || env.current.as_bytes()[(env.cursor - 1) as usize] != 136)
     {
         return false;
     }
@@ -1004,13 +998,13 @@ fn r_Suffix_Verb_Step2c(env: &mut SnowballEnv, context: &mut Context) -> bool {
     env.bra = env.cursor;
     match among_var {
         1 => {
-            if (env.current.chars().count() as i32) < 4 {
+            if (env.current.chars().count()) < 4 {
                 return false;
             }
             env.slice_del();
         }
         2 => {
-            if (env.current.chars().count() as i32) < 6 {
+            if (env.current.chars().count()) < 6 {
                 return false;
             }
             env.slice_del();
@@ -1020,7 +1014,7 @@ fn r_Suffix_Verb_Step2c(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_Suffix_All_alef_maqsura(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_Suffix_All_alef_maqsura(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if !env.eq_s_b(&"\u{649}") {
         return false;
@@ -1030,7 +1024,7 @@ fn r_Suffix_All_alef_maqsura(env: &mut SnowballEnv, context: &mut Context) -> bo
     return true;
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context { b_is_defined: false, b_is_verb: false, b_is_noun: false };
     context.b_is_noun = true;
     context.b_is_verb = true;

@@ -1,10 +1,12 @@
 //! Generated from polish.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::{Among, SnowballEnv};
 
 #[derive(Clone)]
@@ -12,7 +14,7 @@ struct Context {
     i_p1: i32,
 }
 
-static A_0: &'static [Among<Context>; 5] = &[
+static A_0: &[Among<Context>; 5] = &[
     Among("byście", -1, 1, None),
     Among("bym", -1, 1, None),
     Among("by", -1, 1, None),
@@ -20,7 +22,7 @@ static A_0: &'static [Among<Context>; 5] = &[
     Among("byś", -1, 1, None),
 ];
 
-static A_1: &'static [Among<Context>; 5] = &[
+static A_1: &[Among<Context>; 5] = &[
     Among("ąc", -1, 1, None),
     Among("ając", 0, 1, None),
     Among("sząc", 0, 2, None),
@@ -28,7 +30,7 @@ static A_1: &'static [Among<Context>; 5] = &[
     Among("iejsz", 3, 1, None),
 ];
 
-static A_2: &'static [Among<Context>; 118] = &[
+static A_2: &[Among<Context>; 118] = &[
     Among("a", -1, 1, Some(&r_R1)),
     Among("ąca", 0, 1, None),
     Among("ająca", 1, 1, None),
@@ -149,17 +151,17 @@ static A_2: &'static [Among<Context>; 118] = &[
     Among("iłeś", 114, 1, None),
 ];
 
-static A_3: &'static [Among<Context>; 4] = &[
+static A_3: &[Among<Context>; 4] = &[
     Among("ń", -1, 2, None),
     Among("ć", -1, 1, None),
     Among("ś", -1, 3, None),
     Among("ź", -1, 4, None),
 ];
 
-static G_v: &'static [u8; 24] =
+static G_v: &[u8; 24] =
     &[17, 65, 16, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 16, 0, 0, 1];
 
-fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_regions(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     context.i_p1 = env.limit;
     if !env.go_out_grouping(G_v, 97, 281) {
         return false;
@@ -173,9 +175,11 @@ fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_R1(env: &mut SnowballEnv, context: &mut Context) -> bool { return context.i_p1 <= env.cursor }
+fn r_R1(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
+    return context.i_p1 <= env.cursor;
+}
 
-fn r_remove_endings(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_remove_endings(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     let v_1 = env.limit - env.cursor;
     'lab0: loop {
@@ -230,8 +234,8 @@ fn r_remove_endings(env: &mut SnowballEnv, context: &mut Context) -> bool {
             'lab3: loop {
                 env.ket = env.cursor;
                 if (env.cursor - 1 <= env.limit_backward
-                    || (env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 99 as u8
-                        && env.current.as_bytes()[(env.cursor - 1) as usize] as u8 != 122 as u8))
+                    || (env.current.as_bytes()[(env.cursor - 1) as usize] != 99
+                        && env.current.as_bytes()[(env.cursor - 1) as usize] != 122))
                 {
                     env.cursor = env.limit - v_4;
                     break 'lab3;
@@ -271,7 +275,7 @@ fn r_remove_endings(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_normalize_consonant(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_normalize_consonant(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     let mut among_var;
     env.ket = env.cursor;
     among_var = env.find_among_b(A_3, context);
@@ -300,7 +304,7 @@ fn r_normalize_consonant(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context { i_p1: 0 };
     let v_1 = env.cursor;
     r_mark_regions(env, context);

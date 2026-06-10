@@ -1,10 +1,12 @@
 //! Generated from armenian.sbl by Snowball 3.1.1 - https://snowballstem.org/
 
+#![expect(clippy::similar_names)]
 #![expect(non_snake_case)]
 #![expect(non_upper_case_globals)]
 #![expect(unused_mut)]
 #![expect(unused_parens)]
 #![expect(unused_variables)]
+#![expect(clippy::unreadable_literal)]
 use crate::snowball::{Among, SnowballEnv};
 
 #[derive(Clone)]
@@ -13,7 +15,7 @@ struct Context {
     i_pV: i32,
 }
 
-static A_0: &'static [Among<Context>; 23] = &[
+static A_0: &[Among<Context>; 23] = &[
     Among("բար", -1, 1, None),
     Among("րորդ", -1, 1, None),
     Among("երորդ", 1, 1, None),
@@ -39,7 +41,7 @@ static A_0: &'static [Among<Context>; 23] = &[
     Among("կոտ", -1, 1, None),
 ];
 
-static A_1: &'static [Among<Context>; 71] = &[
+static A_1: &[Among<Context>; 71] = &[
     Among("ար", -1, 1, None),
     Among("ացար", 0, 1, None),
     Among("եցար", 0, 1, None),
@@ -113,7 +115,7 @@ static A_1: &'static [Among<Context>; 71] = &[
     Among("ելով", -1, 1, None),
 ];
 
-static A_2: &'static [Among<Context>; 40] = &[
+static A_2: &[Among<Context>; 40] = &[
     Among("գար", -1, 1, None),
     Among("վոր", -1, 1, None),
     Among("ավոր", 1, 1, None),
@@ -156,7 +158,7 @@ static A_2: &'static [Among<Context>; 40] = &[
     Among("ուստ", -1, 1, None),
 ];
 
-static A_3: &'static [Among<Context>; 57] = &[
+static A_3: &[Among<Context>; 57] = &[
     Among("եր", -1, 1, None),
     Among("ներ", 0, 1, None),
     Among("ց", -1, 1, None),
@@ -216,9 +218,9 @@ static A_3: &'static [Among<Context>; 57] = &[
     Among("վով", 52, 1, None),
 ];
 
-static G_v: &'static [u8; 5] = &[209, 4, 128, 0, 18];
+static G_v: &[u8; 5] = &[209, 4, 128, 0, 18];
 
-fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_mark_regions(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     context.i_pV = env.limit;
     context.i_p2 = env.limit;
     let v_1 = env.cursor;
@@ -247,7 +249,7 @@ fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_adjective(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_adjective(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_0, context) == 0 {
         return false;
@@ -257,7 +259,7 @@ fn r_adjective(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_verb(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_1, context) == 0 {
         return false;
@@ -267,7 +269,7 @@ fn r_verb(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_noun(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_2, context) == 0 {
         return false;
@@ -277,7 +279,7 @@ fn r_noun(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-fn r_ending(env: &mut SnowballEnv, context: &mut Context) -> bool {
+fn r_ending(env: &mut SnowballEnv<'_>, context: &mut Context) -> bool {
     env.ket = env.cursor;
     if env.find_among_b(A_3, context) == 0 {
         return false;
@@ -290,7 +292,7 @@ fn r_ending(env: &mut SnowballEnv, context: &mut Context) -> bool {
     return true;
 }
 
-pub fn stem(env: &mut SnowballEnv) -> bool {
+pub fn stem(env: &mut SnowballEnv<'_>) -> bool {
     let mut context = &mut Context { i_p2: 0, i_pV: 0 };
     r_mark_regions(env, context);
     env.limit_backward = env.cursor;
