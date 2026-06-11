@@ -8,21 +8,22 @@
   </head>
   <body>
     <h1>Sorrel: local-first search engine</h1>
+    <form id="form" method="post">
+      <fieldset>
+        <legend>Provide your search query</legend>
 
-    <search>
-      <form id="form" method="post">
-        <fieldset>
-          <legend>Provide your search query</legend>
-          <input type="search" name="query" id="query" />
-          <button type="submit">Search</button>
-        </fieldset>
+        <input type="search" name="query" id="query" autocomplete="off" spellcheck="true" />
 
-        <ul id="results"></ul>
-      </form>
-    </search>
+        <button type="submit">Search</button>
+      </fieldset>
+    </form>
+
+    <ul id="results"></ul>
 
     <template id="template">
-      <li><a href=""></a></li>
+      <li class="result">
+        <a target="_blank" rel="noopener noreferrer"></a>
+      </li>
     </template>
   </body>
 </html>
