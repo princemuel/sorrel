@@ -1,6 +1,7 @@
 use core::fmt::Display;
 use std::io;
 use std::net::ToSocketAddrs;
+use std::path::PathBuf;
 
 use tiny_http::{Header, Method, Request, Response, Server};
 
@@ -43,6 +44,13 @@ fn serve_request(req: Request, model: &impl Model) -> io::Result<()> {
 
 // TODO: the errors of serve_api_search should probably return JSON
 fn serve_api_search(mut req: Request, model: &impl Model) -> io::Result<()> {
+    #[derive(serde::Serialize)]
+    struct SearchResult {
+        rank: f32,
+        url: PathBuf,
+        title: PathBuf,
+    }
+
     let mut buf = Vec::new();
     req.as_reader().read_to_end(&mut buf)?;
 
@@ -55,14 +63,25 @@ fn serve_api_search(mut req: Request, model: &impl Model) -> io::Result<()> {
     };
 
     let Ok(results) = model.search(query) else { return serve_500(req) };
-    let Ok(json) = serde_json::to_string(&results.iter().take(20).collect::<Vec<_>>()) else {
+
+    let data: Vec<_> = results
+        .iter()
+        .take(20)
+        .map(|(path, rank)| SearchResult {
+            rank: *rank,
+            url: path.canonicalize().unwrap_or(path.to_owned()),
+            title: path.to_owned(),
+        })
+        .collect();
+
+    let Ok(payload) = serde_json::to_string(&data) else {
         return serve_500(req);
     };
 
     let Ok(content_type) = Header::from_bytes("Content-Type", "application/json") else {
         return serve_400(req, "invalid header value");
     };
-    req.respond(Response::from_string(json).with_header(content_type))
+    req.respond(Response::from_string(payload).with_header(content_type))
 }
 
 fn serve_static(req: Request, bytes: &[u8], content_type: &str) -> io::Result<()> {
