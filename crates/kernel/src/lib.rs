@@ -33,7 +33,7 @@ pub fn run(args: &Args) -> Result<(), GlobalError> {
 
                 let doc = Parser::read_by_ext(path).map_err(|e| eprintln!("ERROR: {e}")).ok();
                 if let Some(content) = doc {
-                    model.add_document(path, &content)?;
+                    model.add_doc(path, &content)?;
                 }
 
                 Ok(())
@@ -70,7 +70,7 @@ pub fn run(args: &Args) -> Result<(), GlobalError> {
 
             println!("searching for '{query}'...");
 
-            for (path, _, rank) in model.search(query)?.iter().take(20) {
+            for (path, rank) in model.search(query)?.iter().take(20) {
                 println!("{path} {rank}", path = path.display());
             }
         }

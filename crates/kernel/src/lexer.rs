@@ -32,7 +32,7 @@ impl<'a> Lexer<'a> {
                     return None;
                 }
 
-                let term = term.to_ascii_uppercase();
+                let term = term.to_ascii_lowercase();
                 return Some(self.stemmer.stem(&term).into_owned().into());
             }
         }
