@@ -1,6 +1,7 @@
 use core::cmp::Ordering;
 use std::collections::HashMap;
 use std::path::{Path, PathBuf};
+use std::time::SystemTime;
 
 use serde::{Deserialize, Serialize};
 
@@ -25,10 +26,11 @@ type Docs = HashMap<PathBuf, Doc>;
 type DocFreq = HashMap<String, usize>;
 type TermFreq = HashMap<String, usize>;
 
-#[derive(Debug, Default, Deserialize, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
 struct Doc {
     tf: TermFreq,
     count: usize,
+    updated_at: SystemTime,
 }
 
 #[derive(Debug, Default, Deserialize, Serialize)]
@@ -63,16 +65,25 @@ impl Model for JsonModel {
         let tokens: Vec<_> = Lexer::new(content).collect();
 
         for term in tokens {
-            tf.entry(term.to_string()).and_modify(|freq| *freq += 1).or_insert(1);
+            tf.entry(term.to_string())
+                .and_modify(|freq| *freq += 1)
+                .or_insert(1);
             count += 1;
         }
 
         // TODO: why not insert to the term freq and doc freq at the same time?
         for t in tf.keys() {
-            self.df.entry(t.to_owned()).and_modify(|freq| *freq += 1).or_insert(1);
+            self.df
+                .entry(t.to_owned())
+                .and_modify(|freq| *freq += 1)
+                .or_insert(1);
         }
 
-        self.docs.insert(path.to_path_buf(), Doc { tf, count });
+        self.docs.insert(path.to_path_buf(), Doc {
+            tf,
+            count,
+            updated_at: path.metadata()?.modified()?,
+        });
 
         Ok(())
     }

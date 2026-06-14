@@ -7,6 +7,7 @@ publish.workspace = true
 
 [dependencies]
 lexopt.workspace = true
+smol = "2.0.2"
 
 [lints]
 workspace = true

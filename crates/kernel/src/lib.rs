@@ -31,7 +31,9 @@ pub fn run(args: &Args) -> Result<(), GlobalError> {
             let add_to_idx = |path: &Path, model: &mut dyn Model| -> Result<(), GlobalError> {
                 eprintln!("indexing {path}...", path = path.display());
 
-                let doc = Parser::read_by_ext(path).map_err(|e| eprintln!("ERROR: {e}")).ok();
+                let doc = Parser::read_by_ext(path)
+                    .map_err(|e| eprintln!("ERROR: {e}"))
+                    .ok();
                 if let Some(content) = doc {
                     model.add_doc(path, &content)?;
                 }
