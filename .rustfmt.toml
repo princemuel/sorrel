@@ -8,7 +8,7 @@ unstable_features           = true
 # -----------------------------------------------
 # Stable Features
 # -----------------------------------------------
-chain_width                 = 60
+chain_width                 = 66
 newline_style               = "Unix"
 use_field_init_shorthand    = true
 use_try_shorthand           = true

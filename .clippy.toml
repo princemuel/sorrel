@@ -2,8 +2,8 @@
 # See full lints list at:
 # https://rust-lang.github.io/rust-clippy/master/index.html
 
-# Minimum Supported Rust Version (conservative for WASM tooling)
-msrv                                  = "1.95"
+# Minimum Supported Rust Version
+msrv                                  = "1.94"
 absolute-paths-max-segments           = 3
 allow-expect-in-tests                 = true
 allow-panic-in-tests                  = true
