@@ -13,26 +13,9 @@ license = "MIT OR Apache-2.0"
 publish = false
 
 [workspace.dependencies]
-http-body-util = "0.1"
-hyper = { version = "1", features = ["full"] }
-hyper-util = { version = "0.1", features = ["full"] }
-lexopt = "0.3"
-poppler-rs = "0.26"
-rusqlite = { version = "0.40", features = ["bundled"] }
-select = "0.6"
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
 thiserror = "2"
-tiny_http = "0.12"
-tokio = { version = "1", features = ["full"] }
-tracing = "0.1"
-tracing-subscriber = { version = "0.3", features = ["env-filter", "registry"] }
-waken_snowball = "0.1"
-xml = "1"
 
 ## #######################
-cli = { path = "crates/cli" }
-kernel = { path = "crates/kernel" }
 
 [workspace.lints.clippy]
 all = { level = "warn", priority = -1 }
@@ -84,7 +67,7 @@ non_zero_suggestions = "warn"
 panic = "warn"
 panic_in_result_fn = "deny"
 pathbuf_init_then_push = "warn"
-pattern_type_mismatch = "allow"
+pattern_type_mismatch = "warn"
 precedence_bits = "warn"
 pub_without_shorthand = "warn"
 rc_buffer = "warn"
@@ -125,7 +108,7 @@ let-underscore-drop = "warn"
 macro-use-extern-crate = "deny"
 meta-variable-misuse = "deny"
 missing-copy-implementations = "warn"
-# missing-docs                          = "deny"
+missing-docs = "warn"
 non-ascii-idents = "deny"
 redundant-imports = "deny"
 redundant-lifetimes = "deny"
@@ -136,11 +119,11 @@ unit-bindings = "deny"
 unnameable-types = "warn"
 unreachable-pub = "warn"
 unsafe-code = "warn"
-# unused-crate-dependencies     = "warn"
+# unused-crate-dependencies = "warn"
 unused-import-braces = "deny"
 unused-lifetimes = "warn"
 unused-qualifications = "deny"
-# unused-results                                = "warn"
+unused-results = "warn"
 
 [profile.bench]
 opt-level = 3

@@ -1,5 +1,5 @@
 [package]
-name = "sorrel_cli"
+name = "sorrel_core"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
